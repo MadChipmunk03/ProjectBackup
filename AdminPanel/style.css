@@ -1,0 +1,85 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.sideBySide {
+  display: flex;
+}
+
+/* TOP PANEL */
+
+.topPanel {
+  width: 100vw;
+  height: 70px;
+
+  color: white;
+  background-color: rgb(0, 86, 143);
+}
+
+.topPanel .logo {
+  width: 250px;
+  display: flex;
+  background-color: rgb(0, 73, 122);
+}
+
+.topPanel .logo h1 {
+  font-size: 25px;
+  display: inline-block;
+  margin: auto 20px auto 5px;
+}
+
+.topPanel .logo img {
+  height: 55px;
+  margin: auto 5px auto 20px;
+}
+
+.listServers {
+  display: flex;
+  margin: 5px 30px;
+}
+
+.topPanel .listServers ul {
+  list-style-type: none;
+}
+
+.topPanel .listServers li {
+  font-size: 30px;
+  margin: 15px;
+  display: inline-block;
+}
+
+/* SIDE PANEL */
+
+.sidePanel {
+  height: calc(100vh - 70px);
+  width: 250px;
+
+  color: white;
+  background-color: rgb(28, 40, 48);
+}
+
+/* MAIN PANEL */
+
+h1.serverHeader {
+  font-size: 50px;
+
+  margin-top: 40px;
+  text-align: center;
+}
+
+.mainPanel {
+  width: calc(100vw - 250px);
+  height: calc(100vh - 70px);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 10px 20px rgb(66, 66, 66) inset;
+}
