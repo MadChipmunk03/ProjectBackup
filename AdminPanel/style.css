@@ -12,6 +12,20 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .sideBySide {
   display: flex;
 }
@@ -44,8 +58,13 @@ body {
 }
 
 .listServers {
+  width: calc(100vw - 600px);
   display: flex;
-  margin: 5px 30px;
+  overflow: auto;
+}
+
+.listServers h1 {
+  margin: 5px 20px;
 }
 
 .topPanel .listServers ul {
@@ -58,14 +77,87 @@ body {
   display: inline-block;
 }
 
+.topPanel .searchServers {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topPanel .searchServers input[type="text"] {
+  float: right;
+  padding: 6px 6px 6px 12px;
+  margin: auto;
+  height: 25px;
+  border-radius: 25px;
+  border: none;
+  font-size: 17px;
+}
+
+.topPanel .searchServers input[type="submit"] {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 50px;
+  margin: auto;
+}
+
 /* SIDE PANEL */
 
 .sidePanel {
   height: calc(100vh - 70px);
-  width: 250px;
 
+  width: 250px;
   color: white;
   background-color: rgb(28, 40, 48);
+}
+
+.sidePanel h1 {
+  margin: 20px 0px 10px 0px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.sidePanel .searchDeamons {
+  margin: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidePanel .searchDeamons input[type="text"] {
+  padding: 6px 6px 6px 12px;
+
+  margin: 20px auto;
+  height: 25px;
+  width: 60%;
+  border-radius: 25px;
+  border: none;
+  font-size: 17px;
+}
+
+.sidePanel .searchDeamons input[type="submit"] {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 50px;
+  margin: auto;
+}
+
+.sidePanel .listDeamons {
+  width: 85%;
+  height: calc(100vh - 280px);
+  margin: 10px auto 20px auto;
+  overflow: auto;
+}
+
+.listDeamons ul {
+  margin-left: 30px;
+  list-style-type: square;
+}
+
+.listDeamons li {
+  font-size: 20px;
 }
 
 /* MAIN PANEL */
