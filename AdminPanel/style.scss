@@ -16,6 +16,10 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Dialogues */
 
 /* scrollbar */
@@ -168,7 +172,7 @@ body {
   box-shadow: 5px 10px 20px rgb(66, 66, 66) inset;
   overflow: auto;
 
-  h1.panelHeader {
+  .panelHeader {
     font-size: 50px;
 
     padding: 20px 0px 10px 0px;
@@ -308,7 +312,6 @@ body {
   }
 
   .backupPanel {
-    display: none;
     width: 100%;
     height: calc(100% - 98px);
 

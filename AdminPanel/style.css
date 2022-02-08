@@ -12,6 +12,10 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Dialogues */
 /* scrollbar */
 ::-webkit-scrollbar {
@@ -186,7 +190,7 @@ body {
   overflow: auto;
 }
 
-.mainPanel h1.panelHeader {
+.mainPanel .panelHeader {
   font-size: 50px;
   padding: 20px 0px 10px 0px;
   text-align: center;
@@ -323,7 +327,6 @@ body {
 }
 
 .mainPanel .backupPanel {
-  display: none;
   width: 100%;
   height: calc(100% - 98px);
 }
