@@ -2,7 +2,16 @@ diagram of server database: https://dbdiagram.io/d/61fc2a8385022f4ee5362d85
 
 ---
 
-## Projekt ZPR
+## To-Do
+
+- [ ] error type
+- [ ] dát backupy do presetu
+- [ ] sjednotit save
+- [ ] bude víc source a destination
+
+---
+
+## Zadání
 
 - Komerční projekt
 - Ústní zadání
