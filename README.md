@@ -2,16 +2,6 @@ diagram of server database: https://dbdiagram.io/d/61fc2a8385022f4ee5362d85
 
 ---
 
-## Další checkpoint
-
-- [ ] error type
-- [ ] dát backupy do presetu
-- [ ] sjednotit save
-- [ ] bude víc source a destination
-- [ ] predelat formulář na dobu zálohy (v konkrétní den(v měsíci nebo týdnu); v konkrétní čas)
-
----
-
 ## Zadání
 
 - Komerční projekt
