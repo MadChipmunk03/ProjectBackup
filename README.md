@@ -2,6 +2,11 @@ diagram of server database: https://dbdiagram.io/d/6209356b85022f4ee586b6db
 
 ---
 
+Checkpoint 3:
+ - Udělat statickou webovou stránku
+
+---
+
 ## Zadání
 
 - Komerční projekt
