@@ -1,0 +1,74 @@
+$commonBlue: rgb(0, 86, 143);
+
+@mixin Dialogue {
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  h2 {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 5px;
+    background-color: $commonBlue;
+    color: white;
+  }
+
+  form {
+    padding: 30px;
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 2px solid $commonBlue;
+    }
+    input[type="submit"] {
+      float: right;
+      border: none;
+      padding: 8px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 0px 4px 8px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+
+      background-color: white;
+      color: black;
+      border: 2px solid $commonBlue;
+    }
+    input[type="submit"]:hover {
+      background-color: $commonBlue;
+      color: white;
+    }
+  }
+}
+
+.Dialogue1 {
+  @include Dialogue();
+  width: 600px;
+  height: 300px;
+}
+
+/* Overlay */
+.DialogueOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}

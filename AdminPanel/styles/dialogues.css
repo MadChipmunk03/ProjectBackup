@@ -1,0 +1,75 @@
+.Dialogue1 {
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  width: 600px;
+  height: 300px;
+}
+
+.Dialogue1 h2 {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 5px;
+  background-color: #00568f;
+  color: white;
+}
+
+.Dialogue1 form {
+  padding: 30px;
+}
+
+.Dialogue1 form input[type="text"],
+.Dialogue1 form input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #00568f;
+}
+
+.Dialogue1 form input[type="submit"] {
+  float: right;
+  border: none;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 0px 4px 8px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #00568f;
+}
+
+.Dialogue1 form input[type="submit"]:hover {
+  background-color: #00568f;
+  color: white;
+}
+
+/* Overlay */
+.DialogueOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  z-index: 5;
+}
+/*# sourceMappingURL=dialogues.css.map */

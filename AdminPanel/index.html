@@ -16,13 +16,7 @@
         <img src="adminLogo.png" alt="adminLogo" />
         <h1>Admin panel</h1>
       </section>
-
-      <section class="spaceing"></section>
-
-      <section class="serverOptions">
-        <input type="submit" value="Change Server ⇄" />
-        <input type="submit" value="Upload ⇪" />
-      </section>
+      <h1 class="panelHeader">Server1</h1>
     </nav>
 
     <section class="sideBySide">
@@ -48,7 +42,6 @@
       </nav>
 
       <main class="mainPanel">
-        <h1 class="panelHeader">Server1</h1>
         <section class="serverPanel">
           <section class="backupComponents">
             <div>
@@ -283,6 +276,23 @@
         </section>
       </main>
     </section>
+    <section class="Dialogue1 hidden">
+      <h2>Login</h2>
+      <div class="container">
+        <form>
+          <label for="pwd">Password:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="pwd"
+            placeholder="Enter password"
+            name="pwd"
+          /><br /><br />
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+    </section>
+    <div class="DialogueOverlay hidden"></div>
     <script src="script.js"></script>
   </body>
 </html>
