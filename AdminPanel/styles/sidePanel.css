@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.sidePanel {
+  height: calc(100vh - 70px);
+  width: 250px;
+  color: white;
+  background-color: #1c2830;
+}
+
+.sidePanel h1 {
+  margin: 20px 0px 10px 0px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.sidePanel .listBackups {
+  width: 85%;
+  height: calc(100vh - 280px);
+  margin: 10px auto 20px auto;
+  overflow: auto;
+}
+
+.sidePanel .listBackups ul {
+  margin-left: 30px;
+  list-style-type: none;
+}
+
+.sidePanel .listBackups li {
+  font-size: 20px;
+}
+
+.sidePanel .listBackups li:before {
+  content: "💾";
+  margin-left: -20px;
+  margin-right: 10px;
+}
+
+.sidePanel .listBackups .listDeamons li:before {
+  content: "💻";
+  margin-left: -20px;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=sidePanel.css.map */

@@ -1,5 +1,4 @@
 .Dialogue1 {
-  overflow: auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -9,11 +8,11 @@
   -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
           box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
-  width: 600px;
+  width: 400px;
   height: 300px;
 }
 
-.Dialogue1 h2 {
+.Dialogue1 h1 {
   width: 100%;
   height: 80px;
   text-align: center;
@@ -21,14 +20,28 @@
   padding-top: 5px;
   background-color: #00568f;
   color: white;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 10px 10px #424242;
+          box-shadow: 0px 10px 10px #424242;
 }
 
-.Dialogue1 form {
-  padding: 30px;
+.Dialogue1 .DialogueContent {
+  padding: 00px 30px 0px 30px;
+  overflow: auto;
+  height: calc(100% - 140px);
 }
 
-.Dialogue1 form input[type="text"],
-.Dialogue1 form input[type="password"] {
+.Dialogue1 .DialogueContent h2 {
+  font-size: 30px;
+  padding: 10px 0px 20px 0px;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  -webkit-text-decoration-color: #00568f;
+          text-decoration-color: #00568f;
+}
+
+.Dialogue1 .DialogueContent form input[type="text"],
+.Dialogue1 .DialogueContent form input[type="password"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -38,7 +51,7 @@
   border-bottom: 2px solid #00568f;
 }
 
-.Dialogue1 form input[type="submit"] {
+.Dialogue1 .DialogueContent form input[type="submit"] {
   float: right;
   border: none;
   padding: 8px 32px;
@@ -55,7 +68,7 @@
   border: 2px solid #00568f;
 }
 
-.Dialogue1 form input[type="submit"]:hover {
+.Dialogue1 .DialogueContent form input[type="submit"]:hover {
   background-color: #00568f;
   color: white;
 }

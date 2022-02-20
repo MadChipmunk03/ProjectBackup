@@ -1,4 +1,4 @@
-$commonBlue: rgb(0, 86, 143);
+@import "globalVariables";
 
 .topPanel {
   width: 100vw;
@@ -9,7 +9,7 @@ $commonBlue: rgb(0, 86, 143);
   .logo {
     width: 250px;
     display: flex;
-    background-color: rgb(0, 73, 122);
+    background-color: rgba($color: #000000, $alpha: 0.15);
 
     h1 {
       font-size: 25px;

@@ -10,7 +10,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #00497a;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .topPanel .logo h1 {
