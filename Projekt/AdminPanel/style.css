@@ -1,0 +1,44 @@
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("styles/dialogues.css");
+@import url("styles/topPanel.css");
+@import url("styles/sidePanel.css");
+@import url("styles/mainPanel.css");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.sideBySide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */
