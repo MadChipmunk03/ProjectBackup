@@ -11,7 +11,7 @@
     <!-- Dialogues -->
 
     <!-- Actual body -->
-    <nav class="topPanel sideBySide">
+    <nav class="topPanel sideBySide hiden">
       <section class="logo">
         <img src="adminLogo.png" alt="adminLogo" />
         <h1>Admin panel</h1>
@@ -19,7 +19,7 @@
       <h1 class="panelHeader">Server1</h1>
     </nav>
 
-    <section class="sideBySide">
+    <section class="sideBySide hiden">
       <nav class="sidePanel">
         <h1>Backups:</h1>
         <hr />
@@ -317,22 +317,26 @@
     </section>
     <div class="DialogueOverlay hidden"></div>
     <form class="BigDialog" style="overflow: scroll; height:  50px; ">
+
+
+
+      
     <section class="NewBackUP">
       <h1>Create new backup</h1>
       <div class="BigDialog">
-      <div style="position:absolute; width: 45%; left:50%;height: 50%; border:5px outset double white; border-radius: 5%; align-content: center;  box-shadow: 0px 10px 10px rgb(66, 66, 66);">
-      <h3 style="background-color: rgb(0, 86, 143); text-align: center; color:white;">Emails</h3> 
+      <div class="Emails">
+      <h3>Emails</h3> 
       <input><input type="submit" value="Add" /><br><br>
-      <table style="color: aliceblue;">
+      <table >
         <tr>admin@gmail.com</tr><button>X</button>
         <tr>lukas@server.com</tr><button>X</button>
         <tr>User@gmail.com</tr><button>X</button>
         <tr>Log@gmail.com</tr><button>X</button>
         </table>
       </div>
-      <div style="left: 3%; width: 45%; border:5px outset double white; border-radius: 5%;  box-shadow: 0px 10px 10px rgb(66, 66, 66); offset-position: left;"> 
+      <div class="BackUpTime"> 
       <h3 style="text-align: center; background-color: rgb(0, 86, 143); color:white">Backup Times</h3>
-      <h3 style="text-align: left; padding-left: 5%">Day:</h3>
+      <h3 style="text-align: left; color: rgb(0, 86, 143); background-color: white;">Day:</h3>
       <input type="checkbox"  name="M" >
       <label for="M"> Monday</label><br>
       <input type="checkbox"  name="T" >
@@ -349,9 +353,9 @@
       <input type="checkbox" name="SU" >
       <label for="SU"> Sunday</label><br>
       </div>
-      <div style="position:absolute; width: 40%; height: 50%; border:5px outset double white; border-radius: 5%; align-content: center;  box-shadow: 0px 10px 10px rgb(66, 66, 66);">
+      <div class="BackupType">
         <div><br>
-<select style="background-color: rgb(0, 86, 143); border-color: white; color: white; width: 98%; text-align: center; font-size:  150%;">
+<select>
     <option style="display: none">Choose Backup</option>
     <option title="Backups everything" style="color:white;"value="Full">Full</option>
     <option title="A data backup that copies all of the files that have changed since the last full backup was performed" style="color: white"value="Diff">Diff</option>
@@ -367,13 +371,16 @@
 
 </div>
 </div><br>
-<div style="position:absolute; width: 45%; height: 50%; left:50%; border:5px outset double white; border-radius: 5%; align-content: center;  box-shadow: 0px 10px 10px rgb(66, 66, 66);">
+<div class="SaveType">
   <select style="background-color: rgb(0, 86, 143); border-color: white; color: white; width: 98%; text-align: center; font-size:  150%;">
     <option style="display: none">Save Type</option>
     <option style="color:white;"value="Full">Local</option>
     <option  style="color: white"value="Diff">NET</option>
     <option  style="color: white"value="Inc">FTP</option>
   </div> 
+
+
+
     </section>
     </form>
     
