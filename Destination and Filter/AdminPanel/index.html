@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Dialogues -->
+
+    <!-- Actual body -->
+    <nav class="topPanel sideBySide">
+      <section class="logo">
+        <img src="adminLogo.png" alt="adminLogo" />
+        <h1>Admin panel</h1>
+      </section>
+      <h1 class="panelHeader">Server1</h1>
+    </nav>
+
+    <section class="sideBySide">
+      <nav class="sidePanel">
+        <h1>Backups:</h1>
+        <hr />
+        <nav class="listBackups">
+          <ul>
+            <li>LANbackup</li>
+            <ul class="listDeamons">
+              <li>Deamon1</li>
+              <li>Deamon2</li>
+              <li>Deamon3</li>
+            </ul>
+            <li>FTP</li>
+            <li>backup3</li>
+          </ul>
+        </nav>
+      </nav>
+
+      <main class="mainPanel">
+        <section class="serverPanel">
+          <section class="backupComponents">
+            <div>
+              <header>Backup1</header>
+              <hr />
+              <ul>
+                <li>Type: Full</li>
+                <li>Save: FTP</li>
+                <li>Errors: 3</li>
+                <li>Deamons: 3</li>
+              </ul>
+              <button>Edit</button>
+            </div>
+            <div>
+              <header>Backup2</header>
+              <hr />
+              <ul>
+                <li>Type: Incremential</li>
+                <li>Save: FTP</li>
+                <li>Errors: 3</li>
+                <li>Deamons: 3</li>
+              </ul>
+              <button>Edit</button>
+            </div>
+          </section>
+          <div class="spaceing"></div>
+          <section class="tables">
+            <table class="statsTable">
+              <thead>
+                <tr>
+                  <th colspan="2">Stats:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Total errors:</td>
+                  <td>7</td>
+                </tr>
+                <tr class="active-row">
+                  <td>Backups:</td>
+                  <td>5</td>
+                </tr>
+                <tr class="active-row">
+                  <td>Deamons:</td>
+                  <td>24</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="errorsTable">
+              <thead>
+                <tr>
+                  <th>Backup</th>
+                  <th>Deamon</th>
+                  <th>Error</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>LANbackup</td>
+                  <td>Deamon1</td>
+                  <td>incorrect source</td>
+                </tr>
+                <tr class="active-row">
+                  <td>LANbackup</td>
+                  <td>Deamon3</td>
+                  <td>unknown destination</td>
+                </tr>
+                <tr class="active-row">
+                  <td>backup3</td>
+                  <td>Deamon6</td>
+                  <td>not enough storage</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+        <section class="backupPanel">
+          <section class="deamonComponents">
+            <div>
+              <header>Deamon1</header>
+              <hr />
+              <ul>
+                <li>IP: 194.25.25.4/25</li>
+                <li>Source: C:\Users\Péťa\Desktop\table</li>
+              </ul>
+              <section style="text-align: center">
+                <button>Edit</button>
+                <button>Restore</button>
+              </section>
+            </div>
+            <div>
+              <header>Deamon2</header>
+              <hr />
+              <ul>
+                <li>IP: 194.25.25.7/25</li>
+                <li>
+                  Source: C:\Users\Péťa\Desktop\C# -
+                  ZPR_PRG\pomocne-tridy\zdrojovy-projekt\WcfService1\.vs\WcfService1\v14
+                </li>
+              </ul>
+              <section style="text-align: center">
+                <button>Edit</button>
+                <button>Restore</button>
+              </section>
+            </div>
+            <div>
+              <header>Deamon3</header>
+              <hr />
+              <ul>
+                <li>IP: 194.25.25.4/25</li>
+                <li>Source: C:\Users\Péťa\Desktop\table</li>
+              </ul>
+              <section style="text-align: center">
+                <button>Edit</button>
+                <button>Restore</button>
+              </section>
+            </div>
+            <div>
+              <header>Deamon4</header>
+              <hr />
+              <ul>
+                <li>IP: 194.25.25.7/25</li>
+                <li>
+                  Source: C:\Users\Péťa\Desktop\C# -
+                  ZPR_PRG\pomocne-tridy\zdrojovy-projekt\WcfService1\.vs\WcfService1\v14
+                </li>
+              </ul>
+              <section style="text-align: center">
+                <button>Edit</button>
+                <button>Restore</button>
+              </section>
+            </div>
+          </section>
+          <section class="bottom">
+            <div class="thirds">
+              <!-- style="border-right:3px solid rgb(179, 179, 179);"-->
+              <h1>Backup:</h1>
+              <form>
+                <input type="radio" id="Full" name="BackupType" value="Full" />
+                <label for="Full">Full</label>
+                <input
+                  type="radio"
+                  id="Incremential"
+                  name="BackupType"
+                  value="Incremential"
+                />
+                <label for="Incremential">Incremential</label>
+                <input
+                  type="radio"
+                  id="Differential"
+                  name="BackupType"
+                  value="Differential"
+                />
+                <label for="Differential">Differential</label>
+              </form>
+              <form class="full"></form>
+              <form class="incremential">
+                <label for="Size">Size</label>
+                <input type="text" id="Size" name="Size" /><br />
+                <label for="Count">Count</label>
+                <input type="text" id="Count" name="Count" />
+              </form>
+              <form class="differential">
+                <label for="Size">Size</label>
+                <input type="text" id="Size" name="Size" /><br />
+                <label for="Count">Count</label>
+                <input type="text" id="Count" name="Count" />
+              </form>
+            </div>
+            <div class="thirds">
+              <h1>Storage:</h1>
+              <form>
+                <input
+                  type="radio"
+                  id="Network"
+                  name="SaveType"
+                  value="Network"
+                />
+                <label for="Network">Network</label>
+                <input type="radio" id="Local" name="SaveType" value="Local" />
+                <label for="Local">Local</label>
+                <input type="radio" id="FTP" name="SaveType" value="FTP" />
+                <label for="FTP">FTP</label>
+              </form>
+              <form class="network">
+                <label for="Destination">Destination</label>
+                <input type="text" id="Destination" name="Destination" /><br />
+                <label for="IP">IP</label>
+                <input type="text" id="IP" name="IP" />
+              </form>
+              <form class="local">
+                <label for="Destination">Destination</label>
+                <input type="text" id="Destination" name="Destination" /><br />
+              </form>
+              <form class="ftp">
+                <label for="Destination">Destination</label>
+                <input type="text" id="Destination" name="Destination" /><br />
+                <label for="IP">IP</label>
+                <input type="text" id="IP" name="IP" /><br />
+                <label for="Username">Username</label>
+                <input type="text" id="Username" name="Username" /><br />
+                <label for="Password">Password</label>
+                <input type="text" id="Password" name="Password" />
+              </form>
+            </div>
+            <div class="thirds">
+              <h1>Errors:</h1>
+              <table class="errorsTable">
+                <thead>
+                  <tr>
+                    <th>Deamon</th>
+                    <th>Error</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Deamon1</td>
+                    <td>incorrect source</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td>Deamon3</td>
+                    <td>unknown destination</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td>null</td>
+                    <td>null</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </main>
+    </section>
+
+    <section class="AddDest ">
+      <h1>Add Destination</h1>
+      <div class="DialogueContent">
+        <form>       
+          
+          <label>Destination route</label>
+          <input
+            type="text"
+            class="form"
+            id="destination"
+            placeholder="\....\....\..."
+            name="Destination"
+          /><br /><br >
+          <select name="Type" id="Types"> 
+            <option style="display:none">Choose Save Type</option>
+            <option>LOCAL</option>¨
+            <option>FTP</option>
+            <option>NETWORK</option>
+          </select>
+          <br><br><br>
+          <div class="AddDest Options">
+           <h2>Login is required</h2>
+           <label  >Username:</label>
+           <input value="Admin" id="Username"><br>
+           <label >Password:</label>
+           <input value="Password"type="password">
+          </div>
+          <br>
+
+          <br><br>
+          <input style="top: 600px" type="submit" value="ADD" />
+        </form>
+      </div>
+    </section>
+
+    <section class="Filters hidden">
+      <h1>Filters</h1>
+      <div class="DialogueContent">
+        <form>       
+          <label>Alias</label>
+          <input type="text">
+          <br><br>      
+          <h3>Selected</h3><input id="Selected" type="checkbox">  
+          <br><br>
+          
+          <h3>Status</h3>
+          <label >Active</label> <input id="Active" type="checkbox">
+          <label >Banned</label> <input id="Active" type="checkbox">
+          <label >Offline</label>  <input id="Ofline" type="checkbox">
+          <br><br>      
+          <h3>Has Errors</h3><input id="Errors" type="checkbox"><br>
+          <input type="Submit" value="FILTER">
+        </form>
+      </div>
+    </section>
+    <div class="DialogueOverlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

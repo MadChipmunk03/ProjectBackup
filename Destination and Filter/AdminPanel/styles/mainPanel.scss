@@ -1,0 +1,220 @@
+@import "globalVariables";
+
+/* MAIN PANEL */
+.mainPanel {
+  width: calc(100vw - 250px);
+  height: calc(100vh - 70px);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 10px 20px rgb(66, 66, 66) inset;
+  overflow: auto;
+
+  @mixin table {
+    table {
+      margin: 25px 0;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      table-layout: fixed;
+    }
+
+    thead tr {
+      background-color: $commonBlue;
+      color: #ffffff;
+      text-align: center;
+    }
+    th,
+    td {
+      padding: 12px 15px;
+    }
+    tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+    tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+  }
+
+  @mixin Components($width, $height, $comWidth, $comHeight) {
+    height: $height;
+    width: $width;
+    margin: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    div {
+      display: inline-block;
+      width: $comWidth;
+      height: $comHeight;
+      border-radius: 15px;
+      margin: 15px 15px;
+      background-color: $darkBlue;
+
+      header {
+        background-color: $commonBlue;
+        border-radius: 15px 15px 0px 0px;
+        padding: 10px 0px;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+      }
+
+      ul {
+        width: 90%;
+        margin-top: 10px;
+        margin-left: 20px;
+        list-style-type: none;
+      }
+
+      li {
+        font-size: 16px;
+        color: white;
+        overflow: hidden;
+      }
+
+      button {
+        height: 35px;
+        padding: 2px 15px;
+
+        color: $darkBlue;
+        font-weight: bold;
+        font-size: 20px;
+
+        background-color: white;
+        border: 3px solid $darkBlue;
+        border-radius: 8px;
+        box-shadow: 3px 3px 0px rgb(85, 85, 85);
+      }
+    }
+  }
+
+  .serverPanel {
+    width: 100%;
+    height: calc(100% - 98px);
+
+    .backupComponents {
+      @include Components(90%, 270px, 180px, 220px);
+
+      button {
+        margin: 10px 0px 10px 50%;
+      }
+    }
+
+    .spaceing {
+      height: 5vh;
+    }
+
+    .tables {
+      display: flex;
+
+      @include table;
+
+      .statsTable {
+        border-collapse: collapse;
+        margin: auto;
+
+        td:nth-child(1) {
+          width: 150px;
+        }
+        td:nth-child(2) {
+          width: 50px;
+          text-align: right;
+        }
+      }
+
+      .errorsTable {
+        border-collapse: collapse;
+        margin: auto;
+
+        td:nth-child(1) {
+          width: 150px;
+        }
+
+        td:nth-child(2) {
+          width: 150px;
+        }
+
+        td:nth-child(3) {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  .backupPanel {
+    width: 100%;
+    height: calc(100% - 98px);
+
+    .deamonComponents {
+      @include Components(90%, 270px, 300px, 170px);
+
+      button {
+        margin: 10px 10px;
+      }
+    }
+
+    .bottom {
+      width: 100%;
+      height: calc(100% - 270px);
+      display: flex;
+
+      .thirds {
+        height: calc(100% - 40px);
+        width: calc(33% - 40px);
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      input[type="radio"] {
+        margin: 0px 0px 0px 20px;
+      }
+
+      input[type="text"] {
+        float: right;
+      }
+
+      .full {
+        display: none;
+      }
+
+      .incremential {
+        display: block;
+      }
+
+      .differential {
+        display: none;
+      }
+
+      .network {
+        display: none;
+      }
+
+      .local {
+        display: none;
+      }
+
+      .ftp {
+        display: block;
+      }
+
+      @include table;
+      .errorsTable {
+        max-height: 75%;
+        border-collapse: collapse;
+        margin: auto;
+
+        td:nth-child(1) {
+          width: 20%;
+        }
+
+        td:nth-child(2) {
+          width: 60%;
+        }
+      }
+    }
+  }
+}

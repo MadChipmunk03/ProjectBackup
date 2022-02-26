@@ -1,0 +1,31 @@
+.topPanel {
+  width: 100vw;
+  height: 70px;
+  color: white;
+  background-color: #00568f;
+}
+
+.topPanel .logo {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.topPanel .logo h1 {
+  font-size: 25px;
+  display: inline-block;
+  margin: auto 20px auto 5px;
+}
+
+.topPanel .logo img {
+  height: 55px;
+  margin: auto 5px auto 20px;
+}
+
+.topPanel .panelHeader {
+  font-size: 40px;
+  margin: auto;
+}
+/*# sourceMappingURL=topPanel.css.map */
