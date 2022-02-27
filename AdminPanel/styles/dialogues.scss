@@ -36,6 +36,10 @@
     }
 
     form {
+      label {
+        font-size: 25px;
+      }
+
       input[type="text"],
       input[type="password"] {
         width: 100%;
@@ -69,10 +73,178 @@
   }
 }
 
-.Dialogue1 {
+.loginDialogue {
   @include Dialogue();
   width: 400px;
-  height: 300px;
+  padding-bottom: 30px;
+}
+
+.newBUDialogue {
+  @include Dialogue();
+  width: 700px;
+  padding-bottom: 30px;
+
+  form {
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin: 8px 2px 0px auto;
+    }
+    input[type="checkbox"]:first-child,
+    input[type="radio"]:first-child {
+      margin-left: 0px;
+    }
+    input[type="number"] {
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 2px solid $commonBlue;
+    }
+    input[type="time"] {
+      border-color: $commonBlue;
+      font-size: 20px;
+      float: right;
+      padding: 0px 10px;
+    }
+    .saveTypeOptions {
+      display: flex;
+      align-items: center;
+      input[type="number"] {
+        text-align: right;
+        width: 40%;
+      }
+
+      label {
+        margin-left: 5%;
+      }
+      label:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+
+  button {
+    float: right;
+    height: 40px;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 0px 4px 24px;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    font-size: 30px;
+    border: 5px solid;
+  }
+  button {
+    background-color: $commonBlue;
+    border-color: $darkBlue;
+  }
+  button:last-child {
+    background-color: gray;
+    border-color: black;
+  }
+  button:hover {
+    background-color: $darkBlue;
+    color: white;
+  }
+}
+
+.AddDest {
+  text-align: center;
+  @include Dialogue();
+  width: 400px;
+  height: 500px;
+  overflow-y: auto;
+
+  .Hidden {
+    display: none;
+  }
+  h1 {
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+  }
+
+  input[type="submit"] {
+    left: 30%;
+    right: 30%;
+    text-align: center;
+  }
+
+  select {
+    background-color: $commonBlue;
+    color: white;
+    width: 100%;
+    text-align: center;
+    border: none;
+    height: 50px;
+    font-size: 150%;
+  }
+  .Options {
+    box-shadow: 5px 10px #888888;
+    top: 450px;
+    height: 250px;
+    left: 50%;
+    text-align: center;
+    width: 85%;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px solid $commonBlue;
+  }
+  h2 {
+    text-align: center;
+  }
+
+  input[id="Username"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid $commonBlue;
+  }
+}
+
+.Filters {
+  @include Dialogue();
+  text-align: center;
+  width: 400px;
+  padding-bottom: 30px;
+  h3 {
+    width: 100%;
+    height: 26px;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 5px;
+    background-color: $commonBlue;
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px #888888;
+  }
+  label {
+    font-size: 25px;
+  }
+  input[type="checkbox"] {
+    background-color: $commonBlue;
+
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  .Options {
+    box-shadow: 5px 10px #888888;
+    top: 350px;
+    height: 250px;
+    left: 50%;
+    text-align: center;
+    width: 85%;
+    border-radius: 10px;
+    position: absolute;
+    border: 0px solid $commonBlue;
+  }
 }
 
 /* Overlay */

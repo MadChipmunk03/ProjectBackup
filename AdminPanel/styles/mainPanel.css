@@ -1,3 +1,4 @@
+/* use sass to @use dialogue @mixins*/
 /* MAIN PANEL */
 .mainPanel {
   width: calc(100vw - 250px);
@@ -5,54 +6,71 @@
   background-color: white;
   -webkit-box-shadow: 5px 10px 20px #424242 inset;
           box-shadow: 5px 10px 20px #424242 inset;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .mainPanel .serverPanel {
   width: 100%;
-  height: calc(100% - 98px);
+  height: calc(100% - 50px);
 }
 
 .mainPanel .serverPanel .backupComponents {
-  height: 270px;
-  width: 90%;
-  margin: auto;
+  margin: 60px auto;
+  -webkit-box-shadow: 10px 10px #646464;
+          box-shadow: 10px 10px #646464;
+  border: 4px solid black;
+  margin: 50px 5% 50px 5%;
+}
+
+.mainPanel .serverPanel .backupComponents h1 {
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 5px;
+  background-color: #00568f;
+  color: white;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 10px 10px #424242;
+          box-shadow: 0px 10px 10px #424242;
+}
+
+.mainPanel .serverPanel .backupComponents .components {
+  padding: 20px 0px 50px 0px;
   overflow-x: auto;
   white-space: nowrap;
 }
 
-.mainPanel .serverPanel .backupComponents div {
+.mainPanel .serverPanel .backupComponents .components div {
   display: inline-block;
   width: 180px;
   height: 220px;
-  border-radius: 15px;
-  margin: 15px 15px;
-  background-color: #1c2830;
+  margin: auto 15px;
+  border: 4px solid #1c2830;
+  -webkit-box-shadow: 10px 10px #646464;
+          box-shadow: 10px 10px #646464;
 }
 
-.mainPanel .serverPanel .backupComponents div header {
+.mainPanel .serverPanel .backupComponents .components div header {
   background-color: #00568f;
-  border-radius: 15px 15px 0px 0px;
   padding: 10px 0px;
   font-size: 20px;
   text-align: center;
   color: white;
 }
 
-.mainPanel .serverPanel .backupComponents div ul {
+.mainPanel .serverPanel .backupComponents .components div ul {
   width: 90%;
   margin-top: 10px;
   margin-left: 20px;
   list-style-type: none;
 }
 
-.mainPanel .serverPanel .backupComponents div li {
+.mainPanel .serverPanel .backupComponents .components div li {
   font-size: 16px;
-  color: white;
   overflow: hidden;
 }
 
-.mainPanel .serverPanel .backupComponents div button {
+.mainPanel .serverPanel .backupComponents .components div button {
   height: 35px;
   padding: 2px 15px;
   color: #1c2830;
@@ -65,12 +83,8 @@
           box-shadow: 3px 3px 0px #555555;
 }
 
-.mainPanel .serverPanel .backupComponents button {
+.mainPanel .serverPanel .backupComponents .components button {
   margin: 10px 0px 10px 50%;
-}
-
-.mainPanel .serverPanel .spaceing {
-  height: 5vh;
 }
 
 .mainPanel .serverPanel .tables {
@@ -80,7 +94,8 @@
 }
 
 .mainPanel .serverPanel .tables table {
-  margin: 25px 0;
+  background-color: #dddddd;
+  border-collapse: collapse;
   font-size: 0.9em;
   font-family: sans-serif;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -88,8 +103,20 @@
   table-layout: fixed;
 }
 
-.mainPanel .serverPanel .tables thead tr {
+.mainPanel .serverPanel .tables th {
   background-color: #00568f;
+  height: 40px;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
+
+.mainPanel .serverPanel .tables th:nth-child(2) {
+  text-align: center;
+}
+
+.mainPanel .serverPanel .tables thead tr {
+  background-color: gray;
   color: #ffffff;
   text-align: center;
 }
@@ -97,10 +124,7 @@
 .mainPanel .serverPanel .tables th,
 .mainPanel .serverPanel .tables td {
   padding: 12px 15px;
-}
-
-.mainPanel .serverPanel .tables tbody tr {
-  border-bottom: 1px solid #dddddd;
+  overflow-wrap: break-word;
 }
 
 .mainPanel .serverPanel .tables tbody tr:nth-of-type(even) {
@@ -138,121 +162,150 @@
   width: 300px;
 }
 
-.mainPanel .backupPanel {
-  width: 100%;
-  height: calc(100% - 98px);
+.mainPanel .configPanel {
+  height: 100%;
 }
 
-.mainPanel .backupPanel .deamonComponents {
-  height: 270px;
-  width: 90%;
-  margin: auto;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.mainPanel .backupPanel .deamonComponents div {
-  display: inline-block;
-  width: 300px;
-  height: 170px;
-  border-radius: 15px;
-  margin: 15px 15px;
-  background-color: #1c2830;
-}
-
-.mainPanel .backupPanel .deamonComponents div header {
-  background-color: #00568f;
-  border-radius: 15px 15px 0px 0px;
-  padding: 10px 0px;
-  font-size: 20px;
-  text-align: center;
-  color: white;
-}
-
-.mainPanel .backupPanel .deamonComponents div ul {
-  width: 90%;
-  margin-top: 10px;
-  margin-left: 20px;
-  list-style-type: none;
-}
-
-.mainPanel .backupPanel .deamonComponents div li {
+.mainPanel .configPanel .half {
+  height: calc(100% - 120px);
+  width: calc(50% - 120px);
+  margin: 60px auto;
+  overflow-y: auto;
   font-size: 16px;
-  color: white;
-  overflow: hidden;
+  -webkit-box-shadow: 10px 10px #646464;
+          box-shadow: 10px 10px #646464;
+  border: 4px solid black;
 }
 
-.mainPanel .backupPanel .deamonComponents div button {
-  height: 35px;
-  padding: 2px 15px;
-  color: #1c2830;
-  font-weight: bold;
-  font-size: 20px;
-  background-color: white;
-  border: 3px solid #1c2830;
-  border-radius: 8px;
-  -webkit-box-shadow: 3px 3px 0px #555555;
-          box-shadow: 3px 3px 0px #555555;
+.mainPanel .configPanel .half .editConfig {
+  padding-bottom: 30px;
 }
 
-.mainPanel .backupPanel .deamonComponents button {
-  margin: 10px 10px;
-}
-
-.mainPanel .backupPanel .bottom {
+.mainPanel .configPanel .half .editConfig h1 {
   width: 100%;
-  height: calc(100% - 270px);
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 5px;
+  background-color: #00568f;
+  color: white;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 10px 10px #424242;
+          box-shadow: 0px 10px 10px #424242;
+}
+
+.mainPanel .configPanel .half .editConfig .DialogueContent {
+  padding: 0px 30px;
+  overflow: auto;
+  height: calc(100% - 140px);
+}
+
+.mainPanel .configPanel .half .editConfig .DialogueContent h2 {
+  font-size: 30px;
+  padding: 10px 0px 20px 0px;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  -webkit-text-decoration-color: #00568f;
+          text-decoration-color: #00568f;
+}
+
+.mainPanel .configPanel .half .editConfig .DialogueContent form input[type="text"],
+.mainPanel .configPanel .half .editConfig .DialogueContent form input[type="password"],
+.mainPanel .configPanel .half .editConfig .DialogueContent form input[type="number"] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #00568f;
+}
+
+.mainPanel .configPanel .half .editConfig .DialogueContent form input[type="submit"] {
+  float: right;
+  border: none;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 0px 4px 8px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #00568f;
+}
+
+.mainPanel .configPanel .half .editConfig .DialogueContent form input[type="submit"]:hover {
+  background-color: #00568f;
+  color: white;
+}
+
+.mainPanel .configPanel .half .editConfig .saveTypeOptions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.mainPanel .backupPanel .bottom .thirds {
-  height: calc(100% - 40px);
-  width: calc(33% - 40px);
-  padding: 20px;
+.mainPanel .configPanel .half .editConfig .saveTypeOptions input[type="number"] {
+  text-align: right;
+  width: 40%;
 }
 
-.mainPanel .backupPanel .bottom h1 {
-  text-align: center;
+.mainPanel .configPanel .half .editConfig .saveTypeOptions label {
+  margin-left: 5%;
+}
+
+.mainPanel .configPanel .half .editConfig .saveTypeOptions label:first-child {
+  margin-left: 0px;
+}
+
+.mainPanel .configPanel .half .editConfig form input[type="text"] {
   font-size: 20px;
-  margin-bottom: 10px;
+  width: calc(100% - 130px);
 }
 
-.mainPanel .backupPanel .bottom input[type="radio"] {
-  margin: 0px 0px 0px 20px;
+.mainPanel .configPanel .half .editConfig button {
+  height: 20px;
+  border: none;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 0px 4px 8px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  border: 2px solid #00568f;
 }
 
-.mainPanel .backupPanel .bottom input[type="text"] {
+.mainPanel .configPanel .half .editConfig button:hover {
+  background-color: #00568f;
+  color: white;
+}
+
+.mainPanel .configPanel .half .editConfig .filterButton {
+  margin: 20px 0px;
+  font-size: 20px;
+  height: 30px;
   float: right;
 }
 
-.mainPanel .backupPanel .bottom .full {
-  display: none;
+.mainPanel .configPanel .half .editConfig .table {
+  overflow-y: auto;
+  max-height: 30vh;
 }
 
-.mainPanel .backupPanel .bottom .incremential {
-  display: block;
-}
-
-.mainPanel .backupPanel .bottom .differential {
-  display: none;
-}
-
-.mainPanel .backupPanel .bottom .network {
-  display: none;
-}
-
-.mainPanel .backupPanel .bottom .local {
-  display: none;
-}
-
-.mainPanel .backupPanel .bottom .ftp {
-  display: block;
-}
-
-.mainPanel .backupPanel .bottom table {
-  margin: 25px 0;
+.mainPanel .configPanel .half .editConfig .table table {
+  background-color: #dddddd;
+  border-collapse: collapse;
   font-size: 0.9em;
   font-family: sans-serif;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -260,36 +313,211 @@
   table-layout: fixed;
 }
 
-.mainPanel .backupPanel .bottom thead tr {
+.mainPanel .configPanel .half .editConfig .table th {
   background-color: #00568f;
+  height: 40px;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
+
+.mainPanel .configPanel .half .editConfig .table th:nth-child(2) {
+  text-align: center;
+}
+
+.mainPanel .configPanel .half .editConfig .table thead tr {
+  background-color: gray;
   color: #ffffff;
   text-align: center;
 }
 
-.mainPanel .backupPanel .bottom th,
-.mainPanel .backupPanel .bottom td {
+.mainPanel .configPanel .half .editConfig .table th,
+.mainPanel .configPanel .half .editConfig .table td {
   padding: 12px 15px;
+  overflow-wrap: break-word;
 }
 
-.mainPanel .backupPanel .bottom tbody tr {
-  border-bottom: 1px solid #dddddd;
-}
-
-.mainPanel .backupPanel .bottom tbody tr:nth-of-type(even) {
+.mainPanel .configPanel .half .editConfig .table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
 
-.mainPanel .backupPanel .bottom .errorsTable {
-  max-height: 75%;
-  border-collapse: collapse;
+.mainPanel .configPanel .half .editConfig .table table td:first-child {
+  width: 50px;
+  text-align: center;
+}
+
+.mainPanel .configPanel .half .editConfig .table table td:last-child {
+  width: 100%;
+  text-align: left;
+}
+
+.mainPanel .configPanel .half .editConfig .table table td span {
+  float: right;
+  font-size: 150%;
+}
+
+.mainPanel .configPanel .half .editConfig .table table td .hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  background-color: #1c2830;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.mainPanel .configPanel .half .editConfig .table table td .hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mainPanel .configPanel .half .editConfig .table table.sources {
+  width: 100%;
+}
+
+.mainPanel .configPanel .half .editConfig input[type="time"] {
+  border-color: #00568f;
+  font-size: 20px;
+  float: right;
+  padding: 0px 10px;
+}
+
+.mainPanel .configPanel .half .editConfig input[type="checkbox"],
+.mainPanel .configPanel .half .editConfig input[type="radio"] {
+  margin: 8px 2px 0px auto;
+}
+
+.mainPanel .configPanel .half .editConfig input[type="checkbox"]:first-child,
+.mainPanel .configPanel .half .editConfig input[type="radio"]:first-child {
+  margin-left: 0px;
+}
+
+.mainPanel .configPanel .half .editConfig label {
+  font-size: 20px;
+}
+
+.mainPanel .configPanel .half .deamonAssignment {
   margin: auto;
+  text-align: right;
+  font-size: 18px;
 }
 
-.mainPanel .backupPanel .bottom .errorsTable td:nth-child(1) {
-  width: 20%;
+.mainPanel .configPanel .half .deamonAssignment h1 {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 5px;
+  background-color: #00568f;
+  color: white;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 10px 10px #424242;
+          box-shadow: 0px 10px 10px #424242;
 }
 
-.mainPanel .backupPanel .bottom .errorsTable td:nth-child(2) {
-  width: 60%;
+.mainPanel .configPanel .half .deamonAssignment input[type="text"] {
+  width: calc(100% - 140px);
+  font-size: 20px;
+  padding: 12px 20px;
+  margin: 8px auto 30px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #00568f;
+}
+
+.mainPanel .configPanel .half .deamonAssignment button {
+  height: 20px;
+  border: none;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 0px 4px 8px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  border: 2px solid #00568f;
+}
+
+.mainPanel .configPanel .half .deamonAssignment button:hover {
+  background-color: #00568f;
+  color: white;
+}
+
+.mainPanel .configPanel .half .deamonAssignment .filterButton {
+  margin: 20px;
+  font-size: 20px;
+  height: 30px;
+  width: 50px;
+}
+
+.mainPanel .configPanel .half .deamonAssignment table {
+  background-color: #dddddd;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  table-layout: fixed;
+}
+
+.mainPanel .configPanel .half .deamonAssignment th {
+  background-color: #00568f;
+  height: 40px;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
+
+.mainPanel .configPanel .half .deamonAssignment th:nth-child(2) {
+  text-align: center;
+}
+
+.mainPanel .configPanel .half .deamonAssignment thead tr {
+  background-color: gray;
+  color: #ffffff;
+  text-align: center;
+}
+
+.mainPanel .configPanel .half .deamonAssignment th,
+.mainPanel .configPanel .half .deamonAssignment td {
+  padding: 12px 15px;
+  overflow-wrap: break-word;
+}
+
+.mainPanel .configPanel .half .deamonAssignment tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.mainPanel .configPanel .half .deamonAssignment td:nth-child(1) {
+  width: 25px;
+}
+
+.mainPanel .configPanel .half .deamonAssignment td:nth-child(2) {
+  width: 100%;
+}
+
+.mainPanel .configPanel .half .deamonAssignment td:nth-child(3) {
+  width: 10px;
+  text-align: center;
+}
+
+.mainPanel .configPanel .half .deamonAssignment td:nth-child(4) {
+  width: 30px;
+  text-align: center;
+}
+
+.mainPanel .deamonPanel {
+  background-color: blue;
 }
 /*# sourceMappingURL=mainPanel.css.map */

@@ -1,4 +1,4 @@
-.Dialogue1 {
+.loginDialogue {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -9,10 +9,10 @@
           box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
   width: 400px;
-  height: 300px;
+  padding-bottom: 30px;
 }
 
-.Dialogue1 h1 {
+.loginDialogue h1 {
   width: 100%;
   height: 80px;
   text-align: center;
@@ -25,13 +25,13 @@
           box-shadow: 0px 10px 10px #424242;
 }
 
-.Dialogue1 .DialogueContent {
+.loginDialogue .DialogueContent {
   padding: 00px 30px 0px 30px;
   overflow: auto;
   height: calc(100% - 140px);
 }
 
-.Dialogue1 .DialogueContent h2 {
+.loginDialogue .DialogueContent h2 {
   font-size: 30px;
   padding: 10px 0px 20px 0px;
   text-decoration: underline;
@@ -40,8 +40,12 @@
           text-decoration-color: #00568f;
 }
 
-.Dialogue1 .DialogueContent form input[type="text"],
-.Dialogue1 .DialogueContent form input[type="password"] {
+.loginDialogue .DialogueContent form label {
+  font-size: 25px;
+}
+
+.loginDialogue .DialogueContent form input[type="text"],
+.loginDialogue .DialogueContent form input[type="password"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -51,7 +55,7 @@
   border-bottom: 2px solid #00568f;
 }
 
-.Dialogue1 .DialogueContent form input[type="submit"] {
+.loginDialogue .DialogueContent form input[type="submit"] {
   float: right;
   border: none;
   padding: 8px 32px;
@@ -68,9 +72,418 @@
   border: 2px solid #00568f;
 }
 
-.Dialogue1 .DialogueContent form input[type="submit"]:hover {
+.loginDialogue .DialogueContent form input[type="submit"]:hover {
   background-color: #00568f;
   color: white;
+}
+
+.newBUDialogue {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  width: 700px;
+  padding-bottom: 30px;
+}
+
+.newBUDialogue h1 {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 5px;
+  background-color: #00568f;
+  color: white;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 10px 10px #424242;
+          box-shadow: 0px 10px 10px #424242;
+}
+
+.newBUDialogue .DialogueContent {
+  padding: 00px 30px 0px 30px;
+  overflow: auto;
+  height: calc(100% - 140px);
+}
+
+.newBUDialogue .DialogueContent h2 {
+  font-size: 30px;
+  padding: 10px 0px 20px 0px;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  -webkit-text-decoration-color: #00568f;
+          text-decoration-color: #00568f;
+}
+
+.newBUDialogue .DialogueContent form label {
+  font-size: 25px;
+}
+
+.newBUDialogue .DialogueContent form input[type="text"],
+.newBUDialogue .DialogueContent form input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #00568f;
+}
+
+.newBUDialogue .DialogueContent form input[type="submit"] {
+  float: right;
+  border: none;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 0px 4px 8px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #00568f;
+}
+
+.newBUDialogue .DialogueContent form input[type="submit"]:hover {
+  background-color: #00568f;
+  color: white;
+}
+
+.newBUDialogue form input[type="checkbox"],
+.newBUDialogue form input[type="radio"] {
+  margin: 8px 2px 0px auto;
+}
+
+.newBUDialogue form input[type="checkbox"]:first-child,
+.newBUDialogue form input[type="radio"]:first-child {
+  margin-left: 0px;
+}
+
+.newBUDialogue form input[type="number"] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #00568f;
+}
+
+.newBUDialogue form input[type="time"] {
+  border-color: #00568f;
+  font-size: 20px;
+  float: right;
+  padding: 0px 10px;
+}
+
+.newBUDialogue form .saveTypeOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newBUDialogue form .saveTypeOptions input[type="number"] {
+  text-align: right;
+  width: 40%;
+}
+
+.newBUDialogue form .saveTypeOptions label {
+  margin-left: 5%;
+}
+
+.newBUDialogue form .saveTypeOptions label:first-child {
+  margin-left: 0px;
+}
+
+.newBUDialogue button {
+  float: right;
+  height: 40px;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 0px 4px 24px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  border-radius: 10px;
+  font-size: 30px;
+  border: 5px solid;
+}
+
+.newBUDialogue button {
+  background-color: #00568f;
+  border-color: #1c2830;
+}
+
+.newBUDialogue button:last-child {
+  background-color: gray;
+  border-color: black;
+}
+
+.newBUDialogue button:hover {
+  background-color: #1c2830;
+  color: white;
+}
+
+.AddDest {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  width: 400px;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.AddDest h1 {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 5px;
+  background-color: #00568f;
+  color: white;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 10px 10px #424242;
+          box-shadow: 0px 10px 10px #424242;
+}
+
+.AddDest .DialogueContent {
+  padding: 00px 30px 0px 30px;
+  overflow: auto;
+  height: calc(100% - 140px);
+}
+
+.AddDest .DialogueContent h2 {
+  font-size: 30px;
+  padding: 10px 0px 20px 0px;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  -webkit-text-decoration-color: #00568f;
+          text-decoration-color: #00568f;
+}
+
+.AddDest .DialogueContent form label {
+  font-size: 25px;
+}
+
+.AddDest .DialogueContent form input[type="text"],
+.AddDest .DialogueContent form input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #00568f;
+}
+
+.AddDest .DialogueContent form input[type="submit"] {
+  float: right;
+  border: none;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 0px 4px 8px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #00568f;
+}
+
+.AddDest .DialogueContent form input[type="submit"]:hover {
+  background-color: #00568f;
+  color: white;
+}
+
+.AddDest .Hidden {
+  display: none;
+}
+
+.AddDest h1 {
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+.AddDest input[type="submit"] {
+  left: 30%;
+  right: 30%;
+  text-align: center;
+}
+
+.AddDest select {
+  background-color: #00568f;
+  color: white;
+  width: 100%;
+  text-align: center;
+  border: none;
+  height: 50px;
+  font-size: 150%;
+}
+
+.AddDest .Options {
+  -webkit-box-shadow: 5px 10px #888888;
+          box-shadow: 5px 10px #888888;
+  top: 450px;
+  height: 250px;
+  left: 50%;
+  text-align: center;
+  width: 85%;
+  border-radius: 10px;
+  position: absolute;
+  border: 1px solid #00568f;
+}
+
+.AddDest h2 {
+  text-align: center;
+}
+
+.AddDest input[id="Username"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #00568f;
+}
+
+.Filters {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  text-align: center;
+  width: 400px;
+  padding-bottom: 30px;
+}
+
+.Filters h1 {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 5px;
+  background-color: #00568f;
+  color: white;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 10px 10px #424242;
+          box-shadow: 0px 10px 10px #424242;
+}
+
+.Filters .DialogueContent {
+  padding: 00px 30px 0px 30px;
+  overflow: auto;
+  height: calc(100% - 140px);
+}
+
+.Filters .DialogueContent h2 {
+  font-size: 30px;
+  padding: 10px 0px 20px 0px;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  -webkit-text-decoration-color: #00568f;
+          text-decoration-color: #00568f;
+}
+
+.Filters .DialogueContent form label {
+  font-size: 25px;
+}
+
+.Filters .DialogueContent form input[type="text"],
+.Filters .DialogueContent form input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #00568f;
+}
+
+.Filters .DialogueContent form input[type="submit"] {
+  float: right;
+  border: none;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 0px 4px 8px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #00568f;
+}
+
+.Filters .DialogueContent form input[type="submit"]:hover {
+  background-color: #00568f;
+  color: white;
+}
+
+.Filters h3 {
+  width: 100%;
+  height: 26px;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 5px;
+  background-color: #00568f;
+  color: white;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px #888888;
+          box-shadow: 3px 3px #888888;
+}
+
+.Filters label {
+  font-size: 25px;
+}
+
+.Filters input[type="checkbox"] {
+  background-color: #00568f;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.Filters .Options {
+  -webkit-box-shadow: 5px 10px #888888;
+          box-shadow: 5px 10px #888888;
+  top: 350px;
+  height: 250px;
+  left: 50%;
+  text-align: center;
+  width: 85%;
+  border-radius: 10px;
+  position: absolute;
+  border: 0px solid #00568f;
 }
 
 /* Overlay */

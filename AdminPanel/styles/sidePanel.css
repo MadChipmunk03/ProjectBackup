@@ -6,21 +6,54 @@
   background-color: #1c2830;
 }
 
-.sidePanel h1 {
+.sidePanel h1.navHeader {
   margin: 20px 0px 10px 0px;
   font-size: 30px;
   text-align: center;
 }
 
+.sidePanel .select {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-shadow: 0px 15px 15px black;
+          box-shadow: 0px 15px 15px black;
+}
+
+.sidePanel .select button {
+  margin: 0px auto;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(28, 40, 48, 0.15);
+  color: gray;
+  border: none;
+  font-size: 20px;
+}
+
+.sidePanel .select button.selected {
+  background-color: #1c2830;
+  color: white;
+}
+
 .sidePanel .listBackups {
   width: 85%;
   height: calc(100vh - 280px);
-  margin: 10px auto 20px auto;
+  margin: 30px auto 30px auto;
   overflow: auto;
 }
 
 .sidePanel .listBackups ul {
-  margin-left: 30px;
+  margin: 0px 30px;
   list-style-type: none;
 }
 
@@ -30,13 +63,25 @@
 
 .sidePanel .listBackups li:before {
   content: "💾";
-  margin-left: -20px;
-  margin-right: 10px;
 }
 
-.sidePanel .listBackups .listDeamons li:before {
+.sidePanel .listDeamons {
+  width: 85%;
+  height: calc(100vh - 280px);
+  margin: 30px auto 30px auto;
+  overflow: auto;
+}
+
+.sidePanel .listDeamons ul {
+  margin: 0px 30px;
+  list-style-type: none;
+}
+
+.sidePanel .listDeamons li {
+  font-size: 20px;
+}
+
+.sidePanel .listDeamons li:before {
   content: "💻";
-  margin-left: -20px;
-  margin-right: 10px;
 }
 /*# sourceMappingURL=sidePanel.css.map */

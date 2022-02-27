@@ -5,37 +5,68 @@
 
   width: 250px;
   color: white;
-  background-color: $darkBlue;
+  background-color: #1c2830;
 
-  h1 {
+  h1.navHeader {
     margin: 20px 0px 10px 0px;
     font-size: 30px;
     text-align: center;
   }
 
-  .listBackups {
+  .select{
+    width: 100%;
+    background-color: rgba($color: #FFFFFF, $alpha: 0.05);
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    box-shadow: 0px 15px 15px rgb(0, 0, 0);
+    button{
+      margin: 0px auto;
+      width: 50%;
+      height: 100%;
+      background-color: rgba($color: #1c2830, $alpha: 0.15);
+      color: gray;
+      border: none;
+      font-size: 20px;
+    }
+
+    button.selected{
+      background-color: #1c2830;
+      color: white;
+    }
+  }
+
+  @mixin listNav{
     width: 85%;
     height: calc(100vh - 280px);
-    margin: 10px auto 20px auto;
+    margin: 30px auto 30px auto;
     overflow: auto;
 
     ul {
-      margin-left: 30px;
+      margin: 0px 30px;
       list-style-type: none;
     }
 
     li {
       font-size: 20px;
     }
+    
+  }
+
+  .listBackups {
+    @include listNav();
+
     li:before {
       content: "💾";
-      margin-left: -20px;
-      margin-right: 10px;
     }
-    .listDeamons li:before {
+  }
+
+  .listDeamons{
+    @include listNav();
+
+    li:before{
       content: "💻";
-      margin-left: -20px;
-      margin-right: 10px;
     }
   }
 }
