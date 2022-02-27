@@ -286,20 +286,31 @@
             placeholder="\....\....\..."
             name="Destination"
           /><br /><br >
-          <select name="Type" id="Types"> 
-            <option style="display:none">Choose Save Type</option>
-            <option>LOCAL</option>¨
-            <option>FTP</option>
-            <option>NETWORK</option>
-          </select>
+          
+            <h2>Choose save type</h2>
+            <input class="Radio" type="radio" id="LOCAL" name="TYPE" >
+            <label for="LOCAL">LOCAL</label>
+            <input type="radio" id="FTP" name="TYPE" >
+             <label for="FTP">FTP</label>
+             <input type="radio" id="NETWROK" name="TYPE">
+             <label for="NETWROK">NETWORK</label>
+             <br><br>
+             <div class="AddDest Options">
+               <br>
+               <h3>IP Adress</h3>
+              <input type="Text">
+              <br><br><br>        
+              <h3>FTP Username</h3>
+              <input type="text">
+              </div>
+              <div class="AddDest Options Hidden">
+                <br> <br> <br> <br> 
+                <h3>IP Adress</h3>
+               <input type="Text">
+               <br>
+               </div>
+       
           <br><br><br>
-          <div class="AddDest Options">
-           <h2>Login is required</h2>
-           <label  >Username:</label>
-           <input value="Admin" id="Username"><br>
-           <label >Password:</label>
-           <input value="Password"type="password">
-          </div>
           <br>
 
           <br><br>

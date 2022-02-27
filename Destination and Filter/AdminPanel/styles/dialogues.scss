@@ -70,14 +70,15 @@
 }
 
 .AddDest {
-
   text-align: center;
   @include Dialogue();
   width: 400px;
   height: 500px;
   overflow-y: auto;
   
-
+  .Hidden {
+    display: none;
+  }
   h1{
     border-bottom-left-radius: 10%;
     border-bottom-Right-radius: 10%;
@@ -101,7 +102,7 @@
   }
   .Options{
     box-shadow: 5px 10px #888888;
-    top: 400px;
+    top: 450px;
     height:  250px;
    left:50%;
    text-align: center;
@@ -109,10 +110,12 @@
    border-radius: 10px;
     position: absolute;
      border: 1px solid $commonBlue;
+    
   }
   h2 {
     text-align: center;
   }
+  
   input[id="Username"]{
     width: 100%;
     padding: 12px 20px;
@@ -153,17 +156,7 @@ background-color: $commonBlue;
   border-radius: 50%;
 }
 
-.Options{
-  box-shadow: 5px 10px #888888;
-  top: 350px;
-  height:  250px;
-  left:50%;
-   text-align: center;
-  width: 85%;
-  border-radius: 10px;
-  position: absolute;
-   border: 0px solid $commonBlue;
-}
+
 }
 
 /* Overlay */
