@@ -1,7 +1,3 @@
-## WIREFRAME To-Do
-- [x] panels
-- [x] server stats
-- [x] Deamon stats
-- [ ] Add server dialogue
-- [ ] Add Deamon dialogue
-- [ ] Login dialogue
+## Server website To-Do
+- [ ] Deamon edit dialogue
+- [ ] Transfer to Angular
