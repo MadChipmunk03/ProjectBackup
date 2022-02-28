@@ -497,7 +497,7 @@
           box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
   width: 700px;
-  height: 450px;
+  padding-bottom: 30px;
 }
 
 .editDeamon h1 {
@@ -566,9 +566,11 @@
 }
 
 .editDeamon .errorTable {
+  width: 90%;
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 0px auto;
+  height: 170px;
   border: 4px solid #1c2830;
   overflow: auto;
 }
@@ -603,7 +605,7 @@
 
 .editDeamon .errorTable th {
   background-color: #00568f;
-  height: 40px;
+  height: 20px;
   font-size: 15px;
   text-align: center;
   color: white;
@@ -636,8 +638,8 @@
 .editDeamon .configsTable {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin: auto auto 0px auto;
-  max-height: 100%;
+  margin: 0px auto 0px auto;
+  height: 285px;
   width: 90%;
   border: 4px solid #1c2830;
   overflow: auto;
@@ -673,7 +675,7 @@
 
 .editDeamon .configsTable th {
   background-color: #00568f;
-  height: 40px;
+  height: 20px;
   font-size: 15px;
   text-align: center;
   color: white;
@@ -716,7 +718,7 @@
 }
 
 .editDeamon .configsTable table th:nth-child(3) {
-  width: 50px;
+  width: 30px;
 }
 
 .editDeamon .configsTable table td:nth-child(3) {

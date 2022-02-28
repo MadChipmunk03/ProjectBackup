@@ -284,7 +284,7 @@
 
   th {
     background-color: $commonBlue;
-    height: 40px;
+    height: 20px;
     font-size: 15px;
     text-align: center;
     color: white;
@@ -309,27 +309,29 @@
   }
 }
 
-.editDeamon{
+.editDeamon {
   @include Dialogue();
   width: 700px;
-  height: 450px;
-  .errorTable{
+  padding-bottom: 30px;
+  .errorTable {
+    width: 90%;
     align-self: flex-end;
     margin: 0px auto;
+    height: 170px;
     @include card();
     @include table();
-    table{
+    table {
       width: 100%;
     }
   }
-  .configsTable{
+  .configsTable {
     align-self: flex-end;
-    margin: auto auto 0px auto;
-    max-height: 100%;
+    margin: 0px auto 0px auto;
+    height: 285px;
     width: 90%;
     @include card();
     @include table();
-    table{
+    table {
       width: 100%;
       th:nth-child(1) {
         widows: calc(100% - 80px);
@@ -337,13 +339,13 @@
       th:nth-child(2) {
         width: 30px;
       }
-      td:nth-child(2){
+      td:nth-child(2) {
         text-align: center;
       }
       th:nth-child(3) {
-        width: 50px;
+        width: 30px;
       }
-      td:nth-child(3){
+      td:nth-child(3) {
         text-align: center;
       }
     }
