@@ -486,6 +486,243 @@
   border: 0px solid #00568f;
 }
 
+.editDeamon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  width: 700px;
+  height: 450px;
+}
+
+.editDeamon h1 {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 5px;
+  background-color: #00568f;
+  color: white;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 10px 10px #424242;
+          box-shadow: 0px 10px 10px #424242;
+}
+
+.editDeamon .DialogueContent {
+  padding: 00px 30px 0px 30px;
+  overflow: auto;
+  height: calc(100% - 140px);
+}
+
+.editDeamon .DialogueContent h2 {
+  font-size: 30px;
+  padding: 10px 0px 20px 0px;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  -webkit-text-decoration-color: #00568f;
+          text-decoration-color: #00568f;
+}
+
+.editDeamon .DialogueContent form label {
+  font-size: 25px;
+}
+
+.editDeamon .DialogueContent form input[type="text"],
+.editDeamon .DialogueContent form input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #00568f;
+}
+
+.editDeamon .DialogueContent form input[type="submit"] {
+  float: right;
+  border: none;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 0px 4px 8px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #00568f;
+}
+
+.editDeamon .DialogueContent form input[type="submit"]:hover {
+  background-color: #00568f;
+  color: white;
+}
+
+.editDeamon .errorTable {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0px auto;
+  border: 4px solid #1c2830;
+  overflow: auto;
+}
+
+.editDeamon .errorTable header {
+  background-color: #00568f;
+  padding: 10px 0px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.editDeamon .errorTable button {
+  padding: 2px 10px;
+  height: 20px;
+  color: #1c2830;
+  font-weight: bold;
+  background-color: white;
+  border: 3px solid #1c2830;
+  border-radius: 8px;
+  -webkit-box-shadow: 3px 3px 0px #555555;
+          box-shadow: 3px 3px 0px #555555;
+}
+
+.editDeamon .errorTable table {
+  background-color: #dddddd;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  table-layout: fixed;
+}
+
+.editDeamon .errorTable th {
+  background-color: #00568f;
+  height: 40px;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
+.editDeamon .errorTable th:nth-child(2) {
+  text-align: center;
+}
+
+.editDeamon .errorTable thead tr {
+  background-color: gray;
+  color: #ffffff;
+  text-align: center;
+}
+
+.editDeamon .errorTable th,
+.editDeamon .errorTable td {
+  padding: 12px 15px;
+  overflow-wrap: break-word;
+}
+
+.editDeamon .errorTable tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.editDeamon .errorTable table {
+  width: 100%;
+}
+
+.editDeamon .configsTable {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: auto auto 0px auto;
+  max-height: 100%;
+  width: 90%;
+  border: 4px solid #1c2830;
+  overflow: auto;
+}
+
+.editDeamon .configsTable header {
+  background-color: #00568f;
+  padding: 10px 0px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.editDeamon .configsTable button {
+  padding: 2px 10px;
+  height: 20px;
+  color: #1c2830;
+  font-weight: bold;
+  background-color: white;
+  border: 3px solid #1c2830;
+  border-radius: 8px;
+  -webkit-box-shadow: 3px 3px 0px #555555;
+          box-shadow: 3px 3px 0px #555555;
+}
+
+.editDeamon .configsTable table {
+  background-color: #dddddd;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  table-layout: fixed;
+}
+
+.editDeamon .configsTable th {
+  background-color: #00568f;
+  height: 40px;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
+.editDeamon .configsTable th:nth-child(2) {
+  text-align: center;
+}
+
+.editDeamon .configsTable thead tr {
+  background-color: gray;
+  color: #ffffff;
+  text-align: center;
+}
+
+.editDeamon .configsTable th,
+.editDeamon .configsTable td {
+  padding: 12px 15px;
+  overflow-wrap: break-word;
+}
+
+.editDeamon .configsTable tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.editDeamon .configsTable table {
+  width: 100%;
+}
+
+.editDeamon .configsTable table th:nth-child(1) {
+  widows: calc(100% - 80px);
+}
+
+.editDeamon .configsTable table th:nth-child(2) {
+  width: 30px;
+}
+
+.editDeamon .configsTable table td:nth-child(2) {
+  text-align: center;
+}
+
+.editDeamon .configsTable table th:nth-child(3) {
+  width: 50px;
+}
+
+.editDeamon .configsTable table td:nth-child(3) {
+  text-align: center;
+}
+
 /* Overlay */
 .DialogueOverlay {
   position: absolute;

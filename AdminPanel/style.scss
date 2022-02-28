@@ -36,6 +36,9 @@ body {
 
 .sideBySide {
   display: flex;
+  .half{
+    width: 50%;
+  }
 }
 
 @import url("styles/dialogues.css");

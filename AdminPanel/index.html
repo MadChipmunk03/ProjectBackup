@@ -21,7 +21,7 @@
     <section class="sideBySide">
       <nav class="sidePanel">
         <section class="select">
-          <button>Backups</button>
+          <button class="">Backups</button>
           <button class="selected">Deamons</button>
         </section>
         <ul class="listBackups hidden">
@@ -235,6 +235,14 @@
               <h1>Edit Config</h1>
               <div class="DialogueContent">
                 <form>
+                  <h2>Alias: </h2>
+                  <input
+                    type="text"
+                    id="enterAlias"
+                    placeholder="Enter alias"
+                    name="enterAlias"
+                  />
+                  <br>
                   <h2>Save type:</h2>
                   <section class="sideBySide">
                     <input
@@ -567,7 +575,6 @@
             </section>
           </div>
         </section>
-        <section class="deamonPanel hidden">c</section>
       </main>
     </section>
 
@@ -680,7 +687,7 @@
       </div>
     </section>
 
-    <section class="AddDest ">
+    <section class="AddDest hidden">
       <h1>Add Destination</h1>
       <div class="DialogueContent">
         <form>       
@@ -726,7 +733,78 @@
       </div>
     </section>
 
-    <div class="DialogueOverlay hidden"></div>
+    <section class="editDeamon">
+      <h1>Edit deamon</h1>
+      <div class="DialogueContent">
+        <div class="sideBySide">
+          <div class="half">
+            <form>
+              <label for="pwd">Alias:</label>
+              <input
+                type="text"
+                id="deamonAlias"
+                placeholder="Change Alias"
+                name="deamonAlias"
+              />
+            </form>
+            <br>
+            <section class="errorTable">
+              <header>Errors</header>
+              <table>
+                <tbody>
+                <tr>
+                <td>Something went wrong!</td>
+                </tr>
+                <tr>
+                <td>Destination doesn't exist</td>
+                </tr>
+                <tr>
+                <td>Destination storage is full</td>
+                </tr>
+                </tbody>
+                </table>
+            </section>
+          </div>
+          <div class="half">
+            <section class="configsTable">
+              <header>Configs</header>
+              <table>
+                  <tbody>
+                    <tr>
+                      <th>Alias</th>
+                      <th>Sel.</th>
+                      <th>Edit</th>
+                    </tr>
+                    <tr>
+                      <td>Full network backup</td>
+                      <td><input type="checkbox"></td>
+                      <td><button>Edit</button></td>
+                    </tr>
+                    <tr>
+                      <td>Backup 1</td>
+                      <td><input type="checkbox"></td>
+                      <td><button>Edit</button></td>
+                    </tr>
+                    <tr>
+                      <td>some Backup</td>
+                      <td><input type="checkbox"></td>
+                      <td><button>Edit</button></td>
+                    </tr>
+                    <tr>
+                      <td>FTP BU</td>
+                      <td><input type="checkbox"></td>
+                      <td><button>Edit</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </section>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <div class="DialogueOverlay"></div>
 
     <script src="script.js"></script>
   </body>

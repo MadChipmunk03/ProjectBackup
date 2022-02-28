@@ -247,6 +247,109 @@
   }
 }
 
+@mixin card() {
+  border: 4px solid $darkBlue;
+  overflow: auto;
+
+  header {
+    background-color: $commonBlue;
+    padding: 10px 0px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  button {
+    padding: 2px 10px;
+    height: 20px;
+
+    color: $darkBlue;
+    font-weight: bold;
+
+    background-color: white;
+    border: 3px solid $darkBlue;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px rgb(85, 85, 85);
+  }
+}
+
+@mixin table {
+  table {
+    background-color: rgb(221, 221, 221);
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    table-layout: fixed;
+  }
+
+  th {
+    background-color: $commonBlue;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+  }
+
+  th:nth-child(2) {
+    text-align: center;
+  }
+
+  thead tr {
+    background-color: gray;
+    color: #ffffff;
+    text-align: center;
+  }
+  th,
+  td {
+    padding: 12px 15px;
+    overflow-wrap: break-word;
+  }
+  tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+}
+
+.editDeamon{
+  @include Dialogue();
+  width: 700px;
+  height: 450px;
+  .errorTable{
+    align-self: flex-end;
+    margin: 0px auto;
+    @include card();
+    @include table();
+    table{
+      width: 100%;
+    }
+  }
+  .configsTable{
+    align-self: flex-end;
+    margin: auto auto 0px auto;
+    max-height: 100%;
+    width: 90%;
+    @include card();
+    @include table();
+    table{
+      width: 100%;
+      th:nth-child(1) {
+        widows: calc(100% - 80px);
+      }
+      th:nth-child(2) {
+        width: 30px;
+      }
+      td:nth-child(2){
+        text-align: center;
+      }
+      th:nth-child(3) {
+        width: 50px;
+      }
+      td:nth-child(3){
+        text-align: center;
+      }
+    }
+  }
+}
+
 /* Overlay */
 .DialogueOverlay {
   position: absolute;

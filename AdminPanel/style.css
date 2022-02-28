@@ -41,4 +41,8 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+
+.sideBySide .half {
+  width: 50%;
+}
 /*# sourceMappingURL=style.css.map */
