@@ -311,6 +311,13 @@
 
 .editDeamon {
   @include Dialogue();
+
+  span {
+    color: green;
+    margin-right: 15px;
+    float: right;
+  }
+
   width: 700px;
   padding-bottom: 30px;
   .errorTable {
@@ -327,7 +334,7 @@
   .configsTable {
     align-self: flex-end;
     margin: 0px auto 0px auto;
-    height: 285px;
+    height: 320px;
     width: 90%;
     @include card();
     @include table();

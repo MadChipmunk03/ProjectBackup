@@ -565,6 +565,12 @@
   color: white;
 }
 
+.editDeamon span {
+  color: green;
+  margin-right: 15px;
+  float: right;
+}
+
 .editDeamon .errorTable {
   width: 90%;
   -ms-flex-item-align: end;
@@ -639,7 +645,7 @@
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 0px auto 0px auto;
-  height: 285px;
+  height: 320px;
   width: 90%;
   border: 4px solid #1c2830;
   overflow: auto;
