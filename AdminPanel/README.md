@@ -1,3 +1,3 @@
 ## Server website To-Do
-- [ ] Deamon edit dialogue
+- [x] Deamon edit dialogue
 - [ ] Transfer to Angular
