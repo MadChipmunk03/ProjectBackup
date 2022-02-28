@@ -21,6 +21,10 @@
     margin-bottom: 30px;
     box-shadow: 0px 10px 10px rgb(66, 66, 66);
   }
+  span.exit{
+    float: right;
+    margin-right: 30px;
+  }
 
   .DialogueContent {
     padding: 00px 30px 0px 30px;
@@ -312,7 +316,7 @@
 .editDeamon {
   @include Dialogue();
 
-  span {
+  span.status {
     color: green;
     margin-right: 15px;
     float: right;

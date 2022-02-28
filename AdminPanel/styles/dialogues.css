@@ -25,6 +25,11 @@
           box-shadow: 0px 10px 10px #424242;
 }
 
+.loginDialogue span.exit {
+  float: right;
+  margin-right: 30px;
+}
+
 .loginDialogue .DialogueContent {
   padding: 00px 30px 0px 30px;
   overflow: auto;
@@ -102,6 +107,11 @@
   margin-bottom: 30px;
   -webkit-box-shadow: 0px 10px 10px #424242;
           box-shadow: 0px 10px 10px #424242;
+}
+
+.newBUDialogue span.exit {
+  float: right;
+  margin-right: 30px;
 }
 
 .newBUDialogue .DialogueContent {
@@ -263,6 +273,11 @@
           box-shadow: 0px 10px 10px #424242;
 }
 
+.AddDest span.exit {
+  float: right;
+  margin-right: 30px;
+}
+
 .AddDest .DialogueContent {
   padding: 00px 30px 0px 30px;
   overflow: auto;
@@ -395,6 +410,11 @@
           box-shadow: 0px 10px 10px #424242;
 }
 
+.Filters span.exit {
+  float: right;
+  margin-right: 30px;
+}
+
 .Filters .DialogueContent {
   padding: 00px 30px 0px 30px;
   overflow: auto;
@@ -513,6 +533,11 @@
           box-shadow: 0px 10px 10px #424242;
 }
 
+.editDeamon span.exit {
+  float: right;
+  margin-right: 30px;
+}
+
 .editDeamon .DialogueContent {
   padding: 00px 30px 0px 30px;
   overflow: auto;
@@ -565,7 +590,7 @@
   color: white;
 }
 
-.editDeamon span {
+.editDeamon span.status {
   color: green;
   margin-right: 15px;
   float: right;
