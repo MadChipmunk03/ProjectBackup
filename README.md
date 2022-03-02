@@ -5,7 +5,8 @@ diagram of server database: https://dbdiagram.io/d/6209356b85022f4ee586b6db
 Checkpoint 4:
  - udělat deamon z dialogu na page
  - info o proběhnutí u configu a deamona
- - udělat Angula verzi
+ - udělat Angula verzi (jen staticky do komponent)
+ - opravit chyby
 
 ---
 
