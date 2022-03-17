@@ -1,0 +1,7 @@
+C:\Users\adasu\source\repos\fadsfas\fadsfas\bin\Debug\fadsfas.exe.config
+C:\Users\adasu\source\repos\fadsfas\fadsfas\bin\Debug\fadsfas.exe
+C:\Users\adasu\source\repos\fadsfas\fadsfas\bin\Debug\fadsfas.pdb
+C:\Users\adasu\source\repos\fadsfas\fadsfas\obj\Debug\fadsfas.csprojAssemblyReference.cache
+C:\Users\adasu\source\repos\fadsfas\fadsfas\obj\Debug\fadsfas.csproj.CoreCompileInputs.cache
+C:\Users\adasu\source\repos\fadsfas\fadsfas\obj\Debug\fadsfas.exe
+C:\Users\adasu\source\repos\fadsfas\fadsfas\obj\Debug\fadsfas.pdb
