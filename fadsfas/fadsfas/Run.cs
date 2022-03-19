@@ -13,18 +13,7 @@ namespace fadsfas
         }
 
 
-        public void TestValues()
-        {
-            Console.WriteLine(Config.BackUpType);
-            foreach (string item in Config.DestinationFolder)
-            {
-                Console.WriteLine(item);
-            }
-           /* foreach (string item in Config.sourcefolder)
-            {
-                Console.WriteLine(item);
-            }*/
-        }
+     
 
         
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace fadsfas
 {
@@ -29,8 +30,11 @@ namespace fadsfas
 
         }
 
-        public void CreateLogFolder()
+        public void CreateLogFolder(string name) //Seznam zalohovanch souboru
         {
+            StreamWriter Writer = new StreamWriter(@"C:\Users\adasu\Desktop\Destination\namelog.txt");
+            Writer.WriteLine(name);
+            Writer.Close();
 
         }
     }
