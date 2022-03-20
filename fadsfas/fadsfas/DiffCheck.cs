@@ -12,13 +12,17 @@ namespace fadsfas
         public bool isDifferent(List<string> DestPath, string FilePath)
         {
             bool isDiff;
-            if(DestPath.Contains(FilePath))
+          
+         
+            if(DestPath.Contains(FilePath) == true)
             {
                 isDiff = false;
+                
             }
             else
             {
                 isDiff = true;
+                
             }
             return isDiff;
         }

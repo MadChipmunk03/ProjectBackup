@@ -13,8 +13,9 @@ namespace fadsfas
         {
             Run Daemon = new Run();
             Daemon.Launch();
-          /// Daemon.TestValues();
+            Console.WriteLine("..end");
             Console.ReadKey(true);
+            
         }
     }
 }

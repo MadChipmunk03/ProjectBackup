@@ -33,7 +33,7 @@ namespace fadsfas
                 LogWriter.Error("File is missing source List");
             }
 
-            this.DestinationFolder = DestinationToSplit.Split(';');
+            this.DestinationFolder =  DestinationToSplit.Split(';');       
             this.sourcefolder = SourceToSplit;
             Reader.Close();
            

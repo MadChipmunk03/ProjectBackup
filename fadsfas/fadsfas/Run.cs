@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Threading;
 
 namespace fadsfas
 {
@@ -8,13 +8,15 @@ namespace fadsfas
         public Algorithm System = new Algorithm();
         public void Launch()
         {
-            Config.LoadConfig();   
+
+            Config.LoadConfig();
+            
             System.Start(Config);
         }
 
 
-     
 
-        
+
+
     }
 }

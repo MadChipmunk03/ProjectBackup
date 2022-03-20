@@ -27,15 +27,8 @@ namespace fadsfas
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine($"{FolderName} was copied!");
             Console.ForegroundColor = ConsoleColor.White;
-
         }
 
-        public void CreateLogFolder(string name) //Seznam zalohovanch souboru
-        {
-            StreamWriter Writer = new StreamWriter(@"C:\Users\adasu\Desktop\Destination\namelog.txt");
-            Writer.WriteLine(name);
-            Writer.Close();
-
-        }
+     
     }
 }
