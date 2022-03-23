@@ -1,6 +1,9 @@
 diagram of server database: https://dbdiagram.io/d/6209356b85022f4ee586b6db
 
 ---
+Checkpoint 5:
+-Implementovat API  s napojením do databáze, security netřeba
+
 
 Checkpoint 4:
  - udělat deamon z dialogu na page
