@@ -58,7 +58,7 @@ namespace Projekt_Daemon.API
                 this.Your_ID = Api.RegisterNewUser(Daemon).Result;
                 Console.WriteLine($"Welcome! Your id is {Your_ID}");
 
-               // Api.NewEvent($"User created, test message id={Your_ID}", 2); 
+                Api.NewEvent($"User created, test message id={Your_ID}", 2); 
               
                 Directory.CreateDirectory(@"C:\Daemon\");
                 using (StreamWriter wr = new StreamWriter(this.FilePath))
@@ -69,7 +69,7 @@ namespace Projekt_Daemon.API
                     wr.WriteLine(Daemon.IP_Address);
                     wr.WriteLine(Daemon.Status);
                 }
-                Console.WriteLine("Please wait for admin to add config id to your UserID");
+                Console.WriteLine("Real time update is not implemented yet! Please wait for server admin to finish settings"); //Počkat na Petra na dokončení svého bodu projektu ať to funguje real time
                 Thread.Sleep(100000);
             } else
             {

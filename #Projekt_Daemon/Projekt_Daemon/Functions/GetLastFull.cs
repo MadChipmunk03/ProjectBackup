@@ -12,7 +12,7 @@ namespace Projekt_Daemon.Functions
         public List<string> GetLastFullBackup()
         {
 
-            //NEKOUKAT NA KOD
+            //Na tohle nekoukej, to jsem psal na poslední chvíli, hlavně jestli to funguje z tvoji strany projektu
 
 
             List<string> vysledek = new List<string>();

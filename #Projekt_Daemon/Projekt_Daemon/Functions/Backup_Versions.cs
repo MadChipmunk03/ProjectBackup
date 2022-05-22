@@ -15,10 +15,7 @@ namespace Projekt_Daemon.Functions
         //                 FileLog FORMAT: NUMBERTOSORT_ID_TYPEOFBACKUP_TIME 
 
         public List<string> FileLogPath(int BackupType, apiService api)
-        {
-
-            
-          
+        {       
             List<String> result = new List<string>();
             DirectoryInfo DirInfo = new DirectoryInfo(DirPath);
             List<int> OldVersions = new List<int>();
@@ -26,22 +23,19 @@ namespace Projekt_Daemon.Functions
             {
                 foreach (var item in DirInfo.GetFiles())
                 {
-
                     string[] Splitter = item.Name.Split('_');
-                    OldVersions.Add(Convert.ToInt32(Splitter[0]));
-                    
+                    OldVersions.Add(Convert.ToInt32(Splitter[0]));                    
                 }
             }
             catch
             {
-                
+                    //Pro test. účely
             }
 
             OldVersions.Add(0);
             if (BackupType > 1)
             {
-                Models.Event ChangeOfType = new Models.Event() { };  //DODĚLAT, CHCI SPÁT JSOU 2 RÁNO A TOHLE JE FAKT ZBYTEČNOST
-                                                                                                 // api.NewEvent();
+                Models.Event ChangeOfType = new Models.Event() { };
             }
            
             result.Add($"{DirPath}{OldVersions.Max()}_BACKUP_LOG.txt");          //OLD

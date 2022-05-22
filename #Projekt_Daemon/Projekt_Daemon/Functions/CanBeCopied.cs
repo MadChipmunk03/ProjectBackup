@@ -34,18 +34,14 @@ namespace Projekt_Daemon.Functions
                 else
                 {
                     res = false;
-                }
-             
+                }       
             }
             else if (BackupType == 2) //DIFF OPROTI FULL
             {
-             /*   if(this.DIFF.GetLastFullBackup().Contains(Check))
+                if(this.DIFF.GetLastFullBackup().Contains(Check))
                 {
                     res = true;
-                }*/            }
-          
-         
-           
+                }          }    
             return res;
         }
         
@@ -56,29 +52,15 @@ namespace Projekt_Daemon.Functions
             bool res;
             var logFile = File.ReadAllLines(LastLog);
             var logList = new List<string>(logFile);
-           
-         
-
             if (logList.Contains(Check) == true)
             {
-                res = true;
-                
+                res = true;                
             }
             else
             {
                 res = false;
-            }
-          
-            return res;
-          
-          
+            }       
+            return res;   
         }
-
-
-        public void DIFFERENCIAL()
-        {
-
-        }
-
     }
 }
