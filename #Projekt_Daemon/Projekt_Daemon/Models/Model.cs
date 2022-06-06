@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,7 @@ namespace Projekt_Daemon
 {
    public class Model
     {
+        
         public int Id { get; set; }
 
         public string Alias { get; set; }

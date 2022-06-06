@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Projekt_Daemon
 {
@@ -11,61 +9,95 @@ namespace Projekt_Daemon
     {
         public void Try() //Základ
         {
+            Console.Title = "LOADING...";
             apiService Ser = new apiService(); //Objekt
             API.NewRegister Register = new API.NewRegister(Ser);
-            
             Register.Checker();
             Model Config = new Model();
             Functions.TimeSpecifier sp = new Functions.TimeSpecifier();
             Functions.Translator tran = new Functions.Translator();
+           
+            List<Models.PendingChange> Penlist = new List<Models.PendingChange>();
             int Your_ID = Register.Get_Your_ID();
-            Models.PendingChange Change = new Models.PendingChange();
-            Change = Ser.GetChange(Your_ID).Result;       
-            int errorCon = 1;        
+            Ser.GetConnectionByDaemonID(Your_ID);
+            Thread.Sleep(5000);
             while (true)
             {
                 try
-                {     
-                    Config = Ser.Getmod(Change.ConfigId).Result; //Získání configu přes ID z pending changes, chybí get na connections
-                    Console.SetCursorPosition(Console.WindowWidth / 2 - 2, 2);
-                    Console.WriteLine(Your_ID);
-                    break;
+                {
+                   
+                    Penlist = Ser.GetChange(Your_ID).Result;
+                   if(Penlist.Count == 0)
+                    {
+                        throw new Exception();
+                    } else
+                    {
+                        Console.SetCursorPosition(5, 5);
+                        Console.Write("".PadRight(10, ' '));
+                        Config = Ser.Getmod(Penlist[0].ConfigId).Result; //Získání configu přes ID z pending changes        
+                        Console.SetCursorPosition(Console.WindowWidth / 2 - 2, 2);
+                        Console.WriteLine(Your_ID);
+                        Console.WriteLine($"[{DateTime.Now}] Loaded Config {Config.Id}");
+                        Console.Title = $"DAEMON({Your_ID}) CONNECTED";
+                        break;
+                    }
+
+                        
+                    
+                   
                 }
                 catch
                 {
-                    // Console.SetCursorPosition(0, 3);                
-                    if (errorCon > 5)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine($"It's taking too long :(");
-                        Console.ForegroundColor = ConsoleColor.White;
-                    }
-                    errorCon++;
+                    Console.SetCursorPosition(5, 5);
+                    Console.Write($"[{DateTime.Now}]Waiting for JOB ({Your_ID})");
+                  
                 }
             }
-        /*    Functions.Backup B = new Functions.Backup();
-            B.StartBackup(Config, Ser);*/
+            string BonusMsg = "Version: checkpoint10";
+            Console.SetCursorPosition(Console.WindowWidth - BonusMsg.Length - 1, 0);
+            Console.Write(BonusMsg);
 
             //Wait for signal   
             DateTime Date = DateTime.Now;
-             while (true)
-               {
-                 Thread.Sleep(2000);     //Každý 2 sekundy kontrola času           
-                 if(sp.Timer(tran.GetTime(Config.TimePeriod), tran.GetWeekDay(Config.TimePeriod)))
-                 {                    
-                     Functions.Backup B = new Functions.Backup();
-                     B.StartBackup(Config, Ser);
-                     if(Change.ChangeType == 0)
-                     {
-                         Config = Ser.Getmod(Change.ConfigId).Result;
-                     }
+        
+
+            Thread.Sleep(1000);
+            Register.ClearBottom();
+            List<Models.PendingChange> TEMPpendlist = new List<Models.PendingChange>();
+            while (true)
+            {
+                Console.CursorVisible = false;
+                Console.SetCursorPosition(0, 5);
+                Console.Write($"Backup sheduled times: {Config.TimePeriod}");
+                Thread.Sleep(4000);     //Každý 4 sekundy kontrola času 
+                TEMPpendlist = Ser.GetChange(Your_ID).Result;
+            
+                if(TEMPpendlist.Count > 0)
+                {
+                    Config = Ser.Getmod(TEMPpendlist[0].ConfigId).Result;
+                   
+                }
+
+                if (sp.Timer(tran.GetTime(Config.TimePeriod), tran.GetWeekDay(Config.TimePeriod)))
+                {
+                    
+                    Register.ClearBottom();
+                    Functions.Backup B = new Functions.Backup();
+                    B.StartBackup(Config, Ser);
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Ser.NewEvent("A backup was successful!", 0);
-                    Console.WriteLine("Backup finished, this message will disapear after 1 minute!");
-                    Thread.Sleep(60000); //Počká minutu jako pojistka před loopem
-                    Register.ClearBottom();               
-                 }
-             }
+                    Thread.Sleep(2000);
+                    Register.ClearBottom();
+                    Console.SetCursorPosition(0, 7);
+                    Console.WriteLine($"[{DateTime.Now}]Backup {Config.Id} finished!");
+                   Ser.NewEvent($"A backup was successful!", 0); //Creates an evnet with ID range(Each deamon has 100 free ID slots in event category*/
+                    Console.WriteLine("This message will disapear after 1 minute(or more...idk)");
+                    Thread.Sleep(50000); //Minutová pojistka před provedením více BU za sebou
+
+
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Register.ClearBottom();
+                }
+            }
         }
     }
 }

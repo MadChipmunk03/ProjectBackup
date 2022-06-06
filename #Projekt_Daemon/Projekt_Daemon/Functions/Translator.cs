@@ -19,7 +19,7 @@ namespace Projekt_Daemon.Functions
         {
             List<int> result = new List<int>();
             string[] Baser = Input.Split(':');
-            string[] Days = Baser[0].Split('.');
+            string[] Days = Baser[0].Split(',');
             foreach (string item in Days)
             {
                 result.Add(this.StringToInt(item));
@@ -29,28 +29,29 @@ namespace Projekt_Daemon.Functions
         }
         public int StringToInt(string Input)
         {
+            
             int result;
-            if (Input== "Mo")
+            if (Input== "Mon")
             {
                 result = 1;
             }
-            else if (Input== "Tu")
+            else if (Input== "Tue")
             {
                 result = 2;
             }
-            else if (Input== "We")
+            else if (Input== "Wed")
             {
                 result = 3;
             }
-            else if (Input== "Th")
+            else if (Input== "Thu")
             {
                 result = 4;
             }
-            else if (Input== "Fr")
+            else if (Input== "Fri")
             {
                 result = 5;
             }
-            else if (Input== "Sa")
+            else if (Input== "Sat")
             {
                 result = 6;
             }

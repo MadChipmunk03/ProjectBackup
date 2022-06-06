@@ -10,12 +10,18 @@ namespace Projekt_Daemon.Functions
     {
         public bool Timer(string Date,List<int> Da)
         {
-            if (Date == DateTime.Now.ToString("HH:mm") && Da.Contains((int)DateTime.Now.DayOfWeek)) 
+          
+            if (Date == DateTime.Now.ToString("HH:mm")
+                //  &&Da.Contains((int)DateTime.Now.DayOfWeek)
+                )
+
             {
+             
                 return true;
             }
             else
             {
+              
                 return false;
             }
         }

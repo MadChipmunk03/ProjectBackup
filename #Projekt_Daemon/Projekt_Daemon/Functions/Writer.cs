@@ -17,16 +17,26 @@ namespace Projekt_Daemon.Functions
     
 
 
-        public void PUSH(string PushLocation, string Type)
+        public void PUSH(string PushLocation, int Type)
         {
+         
+            string Translated = "FULL";
+            if(Type == 2)
+            {
+                Translated = "DIFF";
+            } else if (Type== 3)
+            {
+                Translated = "INC";
+            }
             using (StreamWriter Writer = new StreamWriter(PushLocation))
             {
                 Writer.WriteLine(DateTime.Now.ToString());
-                Writer.WriteLine($"{Type} backup");
+                Writer.WriteLine($"{Translated} backup");
                 foreach (string item in this.ListOfPaths)
                 {
                     Writer.WriteLine(item);
                 }
+                Console.WriteLine($"[{DateTime.Now}] Pushed logfile");
             }
         }
     }
