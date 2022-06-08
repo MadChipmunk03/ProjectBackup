@@ -1,0 +1,80 @@
+﻿
+API To-Do:
+
+	For deamon:
+		- authentication with deamon Id and desktop name
+
+		- FullConfigs:
+			+ Get - config joined with sources and destinations by Id, that was requested
+
+		- Deamon:
+			+ add -> trigger to add connections with all configs ✅
+			+ delete -> trigger to remove related connections and its events ✅
+
+		- PendingChanges:
+			+ Get - list of pendingChanges for responding deamon ✅
+				- if null change Deamon Status to synced
+			+ Delete - when synced
+
+	For AdminPanel:
+		- authentication with preset const password
+
+		- Configs:
+			+ getAll ✅
+			+ getById ✅
+			+ add ✅
+			+ delete ✅
+			+ edit / update ✅
+
+		- Connections:
+			+ getAll ✅
+
+		- Deamons:
+			+ getAll ✅
+			+ getById ✅
+
+		- Destinations:
+			+ getAll ✅
+			+ add ✅
+			+ delete ✅
+			+ edit / update ✅
+
+		- Events:
+			+ getAll ✅
+			+ add ✅
+
+		- Sources:
+			+ getAll ✅
+			+ delete ✅
+			+ add ✅
+			+ edit ✅
+
+	MySQL TRIGGERS:
+
+		- configs removed 
+			+ remove related sources with deleted config's Id ✅
+			+ remove related destinations with deleted config's Id ✅
+			+ remove connections with configs Id ✅
+
+		- config is added / changed / deleted 
+			+ insert record into tbPendingChanges
+
+		- configs added
+			+ create connections with all deamons
+
+		- deamon removed 
+			+ remove related connections ✅
+
+		- deamon added
+			+ create connections with all configs
+
+		- connection removed
+			+ removed related events ✅
+
+		- pendingChange
+			+ after delete -> check if it is the last one -> change Deamon status to synced 
+
+
+		
+		
+		
