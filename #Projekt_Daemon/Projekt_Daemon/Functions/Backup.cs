@@ -14,11 +14,16 @@ namespace Projekt_Daemon.Functions
         private Writer Writter = new Writer();
         private CanBeCopied Cpy = new CanBeCopied();
         private FTP FTPConnection = new FTP();
-
+        private string temp = @"C:\TempLog\";
         public void StartBackup(Model SourceModel, apiService Api)
         {
+            DirectoryInfo TempFolder = new DirectoryInfo(temp);
+            if(TempFolder.Exists != false)
+            {
+                TempFolder.Delete(true);
+            }
             Console.WriteLine(SourceModel.BackupType);
-
+            
             if (Directory.Exists(@"C:\Daemon\BackupLogs\") == false)
             {
                 Console.WriteLine($"[{DateTime.Now}] BackupLog directory created.");
@@ -36,7 +41,8 @@ namespace Projekt_Daemon.Functions
                     {
                         NetworkCredential Credent = new NetworkCredential() { Password = Dest.Password, UserName = Dest.Username };
                         Console.WriteLine($"[{DateTime.Now}] Running [{Source}]!");
-                        this.FTPConnection.RunFTP(Dest.Path , Source.SourcePath, Credent, Api);
+                        this.RunBackup(Source.SourcePath, temp);
+                        this.FTPConnection.RunFTP(Dest.Path , temp, Credent, Api);
 
                     }
                     else

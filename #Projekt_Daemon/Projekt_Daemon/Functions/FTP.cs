@@ -18,6 +18,7 @@ namespace Projekt_Daemon.Functions
 
         public void RunFTP(string FTPDestination, string Source, NetworkCredential Login, apiService api)
         {
+            
             this.Dest = FTPDestination;
             this.Login = Login;
 
@@ -37,6 +38,8 @@ namespace Projekt_Daemon.Functions
             }
 
             ZipFile.CreateFromDirectory(Source, tempfolder);
+
+           
             this.BackupName = this.GetNextName();
             using (var client = new WebClient())
             {

@@ -64,7 +64,7 @@ namespace Projekt_Daemon
     
             //types: 0 - successfulBackup, 1 - error, 2- info
             Models.Event NewEven = new Models.Event() { ConnectionId = ConnectionID, Message = message, Status = true, Time = DateTime.Now, Type = type };
-            Console.WriteLine($"[{DateTime.Now}] Uploaded event;"); 
+            Console.WriteLine($"[{DateTime.Now}] Uploaded event({ConnectionID})"); 
             await this.Client.PostAsJsonAsync("/api/ForDeamon/event", NewEven);
         }
 
