@@ -1,0 +1,259 @@
+$darkBlue: #1c2830;
+$commonBlue: rgb(0, 86, 143);
+$btnShadowGray: rgb(85, 85, 85);
+
+@mixin card() {
+  border: 4px solid $darkBlue;
+  overflow: auto;
+
+  header {
+    background-color: $commonBlue;
+    padding: 10px 0px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  button {
+    padding: 2px 10px;
+    height: 20px;
+
+    color: $darkBlue;
+    font-weight: bold;
+
+    background-color: white;
+    border: 3px solid $darkBlue;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px rgb(85, 85, 85);
+  }
+}
+
+@mixin table {
+  table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 10px 10px #646464;
+    table-layout: fixed;
+  }
+
+  th {
+    background-color: $commonBlue;
+    height: 40px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+
+  th:nth-child(2) {
+    text-align: center;
+  }
+
+  thead tr {
+    background-color: gray;
+    color: #ffffff;
+    text-align: center;
+  }
+  th,
+  td {
+    padding: 12px 15px;
+    overflow-wrap: break-word;
+  }
+  tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+}
+
+.deamonPanel {
+  @mixin card() {
+    border: 4px solid $darkBlue;
+    overflow: auto;
+
+    header {
+      background-color: $commonBlue;
+      padding: 10px 0px;
+      font-size: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    button {
+      padding: 2px 10px;
+      height: 20px;
+
+      color: $darkBlue;
+      font-weight: bold;
+
+      background-color: white;
+      border: 3px solid $darkBlue;
+      border-radius: 8px;
+      box-shadow: 3px 3px 0px rgb(85, 85, 85);
+    }
+  }
+
+  @mixin table {
+    table {
+      border-collapse: collapse;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      table-layout: fixed;
+    }
+
+    th {
+      background-color: $commonBlue;
+      height: 20px;
+      font-size: 15px;
+      text-align: center;
+      color: white;
+    }
+
+    th:nth-child(2) {
+      text-align: center;
+    }
+
+    thead tr {
+      background-color: gray;
+      color: #ffffff;
+      text-align: center;
+    }
+    th,
+    td {
+      padding: 12px 15px;
+      overflow-wrap: break-word;
+    }
+    tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+  }
+  height: calc(100% - 128px);
+  width: calc(100% - 120px);
+  margin: 60px auto;
+  overflow: auto;
+
+  .content {
+    border: 4px solid $darkBlue;
+    box-shadow: 10px 10px #646464;
+    width: 90%;
+    padding-bottom: 10px;
+    overflow: auto;
+    height: 320px;
+    margin-bottom: 5%;
+
+    h1 {
+      width: 100%;
+      height: 50px;
+      text-align: center;
+      font-size: 30px;
+      padding-top: 5px;
+      background-color: $commonBlue;
+      color: white;
+      margin-bottom: 30px;
+      box-shadow: 0px 10px 10px rgb(66, 66, 66);
+    }
+
+    h2 {
+      font-size: 30px;
+      padding: 10px 0px 20px 0px;
+      text-decoration: underline;
+      text-decoration-thickness: 4px;
+      text-decoration-color: $commonBlue;
+    }
+
+    form {
+      padding: 00px 30px 40px 30px;
+      button{
+        float: right;
+        margin-left: 10px;
+      }
+
+      label {
+        font-size: 25px;
+
+        width: 100%;
+
+        button.status {
+          font-size: 20px;
+          background-color: #dadada;
+        }
+        span.ip {
+          float: right;
+        }
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 0px 0px 15px 0px;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid $commonBlue;
+      }
+      input[type="submit"] {
+        float: right;
+        border: none;
+        padding: 8px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 0px 4px 8px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+
+        background-color: white;
+        color: black;
+        border: 2px solid $commonBlue;
+      }
+      input[type="submit"]:hover {
+        background-color: $commonBlue;
+        color: white;
+      }
+    }
+  }
+  .errorTable {
+    width: 90%;
+    align-self: flex-end;
+    margin: auto auto 0px 0px;
+    height: calc(95% - 330px);
+    @include card();
+    @include table();
+
+    header {
+      font-size: 30px;
+    }
+    table {
+      width: 100%;
+      th:nth-child(1) {
+        width: 150px;
+      }
+      td:nth-child(2) {
+        width: 100%;
+      }
+    }
+    box-shadow: 10px 10px #646464;
+  }
+  .configsTable {
+    box-shadow: 10px 10px #646464;
+    margin: 0px 10px 0px auto;
+    height: calc(100% - 20px);
+    width: 90%;
+    @include card();
+    @include table();
+
+    header {
+      font-size: 30px;
+    }
+    table {
+      th:nth-child(1) {
+        width: 100%;
+      }
+      td:nth-child(2) {
+        text-align: center;
+      }
+      td:nth-child(3) {
+        text-align: center;
+      }
+    }
+  }
+}

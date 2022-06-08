@@ -1,0 +1,86 @@
+$darkBlue: #1c2830;
+$commonBlue: rgb(0, 86, 143);
+$btnShadowGray: rgb(85, 85, 85);
+
+@mixin table {
+  table {
+    background-color: rgb(221, 221, 221);
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    table-layout: fixed;
+  }
+
+  th {
+    background-color: $commonBlue;
+    height: 40px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+
+  th:nth-child(2) {
+    text-align: center;
+  }
+
+  thead tr {
+    background-color: gray;
+    color: #ffffff;
+    text-align: center;
+  }
+  th,
+  td {
+    padding: 12px 15px;
+    overflow-wrap: break-word;
+  }
+  tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+}
+
+.deamonAssignment {
+  h1 {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-size: 50px;
+    background-color: $commonBlue;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 140px);
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 8px auto 30px auto;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid $commonBlue;
+  }
+
+  button {
+    float: right;
+    font-size: 20px;
+    margin: 15px 15px auto 0px;
+  }
+
+  .table {
+    @include table();
+    overflow-y: auto;
+    width: 100%;
+    text-align: right;
+    font-size: 18px;
+
+    td:nth-child(1) {
+      text-align: left;
+      width: 100%;
+      text-overflow: ellipsis;
+    }
+    td:nth-child(2) {
+      width: 10px;
+      text-align: center;
+    }
+  }
+}

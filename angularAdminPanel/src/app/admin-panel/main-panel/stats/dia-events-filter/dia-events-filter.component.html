@@ -1,0 +1,51 @@
+<section class="eventsFilterDialogue">
+  <h1>Filter events<span class="exit">✖</span></h1>
+  <div class="DialogueContent">
+    <form>
+      <h2>By alias:</h2>
+      <label for="configIncludes">Config:</label>
+      <input
+        type="text"
+        id="configIncludes"
+        name="configIncludes"
+      /><br /><br />
+      <label for="deamonIncludes">Deamon:</label>
+      <input type="text" id="deamonIncludes" name="deamonIncludes" />
+
+      <br />
+      <h2>Active:</h2>
+      <section class="sideBySide">
+        <input type="radio" id="Yes" name="activeEvents" value="Yes" />
+        <label for="Yes">Yes</label>
+        <input type="radio" id="No" name="activeEvents" value="No" />
+        <label for="No">No</label>
+        <input type="radio" id="All" name="activeEvents" value="All" />
+        <label for="All">All</label>
+      </section>
+      <br />
+      <h2>Type:</h2>
+      <section class="sideBySide">
+        <input type="checkbox" id="Succes" name="eventsType" value="Succes" />
+        <label for="Succes">Success</label>
+        <input type="checkbox" id="Error" name="eventsType" value="Error" />
+        <label for="Error">Error</label>
+        <input type="checkbox" id="Info" name="eventsType" value="Info" />
+        <label for="Info">Info</label>
+      </section>
+      <br />
+      <h2>Time:</h2>
+      <div class="sideBySide">
+        <div class="half">
+          <label for="evTimeFrom">From:</label>
+          <br />
+          <input type="date" id="backupTime" name="BUtime" />
+        </div>
+        <div class="half">
+          <label for="evTimeTill">Till:</label>
+          <br />
+          <input type="date" id="backupTime" name="BUtime" />
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

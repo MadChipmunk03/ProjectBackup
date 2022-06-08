@@ -1,0 +1,181 @@
+$darkBlue: #1c2830;
+$commonBlue: rgb(0, 86, 143);
+$btnShadowGray: rgb(85, 85, 85);
+
+@mixin Dialogue {
+  h1 {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 5px;
+    background-color: $commonBlue;
+    color: white;
+    margin-bottom: 30px;
+    box-shadow: 0px 10px 10px rgb(66, 66, 66);
+  }
+
+  .DialogueContent {
+    padding: 0px 30px;
+    overflow: auto;
+    height: calc(100% - 140px);
+
+    h2 {
+      font-size: 30px;
+      padding: 10px 0px 20px 0px;
+      text-decoration: underline;
+      text-decoration-thickness: 4px;
+      text-decoration-color: $commonBlue;
+    }
+
+    form {
+      button, input[type="submit"] {
+        float: right;
+        font-size: 20px;
+        margin: 10px 0px auto 10px;
+      }
+
+      button.btn-light{
+        background-color: #dadada;
+      }
+
+      // input[type="text"],
+      // input[type="password"],
+      // input[type="number"] {
+      //   padding: 12px 20px;
+      //   margin: 8px 0;
+      //   box-sizing: border-box;
+      //   border: none;
+      //   border-bottom: 2px solid $commonBlue;
+      // }
+    }
+  }
+}
+
+@mixin table {
+  table {
+    background-color: rgb(221, 221, 221);
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    table-layout: fixed;
+  }
+
+  th {
+    background-color: $commonBlue;
+    height: 40px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+
+  th:nth-child(2) {
+    text-align: center;
+  }
+
+  thead tr {
+    background-color: gray;
+    color: #ffffff;
+    text-align: center;
+  }
+  th,
+  td {
+    padding: 12px 15px;
+    overflow-wrap: break-word;
+  }
+  tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+}
+
+.editConfig {
+  @include Dialogue();
+  padding-bottom: 30px;
+
+  .saveTypeOptions {
+    align-items: center;
+    input[type="number"] {
+      text-align: right;
+    }
+    label {
+      margin-left: 5%;
+    }
+    label:first-child {
+      margin-left: 0px;
+    }
+  }
+
+  // form {
+  //   input[type="text"] {
+  //     // font-size: 20px;
+  //     width: calc(100% - 130px);
+  //   }
+  // }
+
+  .table {
+    @include table();
+    overflow-y: auto;
+    max-height: 30vh;
+
+    table {
+      td:first-child {
+        width: 50px;
+        text-align: center;
+      }
+      td:last-child {
+        width: 100%;
+        text-align: left;
+      }
+
+      td {
+        span {
+          float: right;
+          font-size: 150%;
+        }
+
+        // .hovertext:before {
+        //   content: attr(data-hover);
+        //   visibility: hidden;
+        //   opacity: 0;
+        //   background-color: $darkBlue;
+        //   color: #fff;
+        //   text-align: center;
+        //   border-radius: 5px;
+        //   padding: 5px;
+        //   transition: opacity 1s ease-in-out;
+
+        //   z-index: 1;
+        //   left: 0;
+        //   top: 110%;
+        // }
+
+        // .hovertext:hover:before {
+        //   opacity: 1;
+        //   visibility: visible;
+        // }
+      }
+    }
+    table.sources {
+      width: 100%;
+    }
+  }
+
+  input[type="time"] {
+    border-color: $commonBlue;
+    font-size: 20px;
+    float: right;
+    padding: 0px 10px;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin: 8px 2px 0px auto;
+  }
+  input[type="checkbox"]:first-child,
+  input[type="radio"]:first-child {
+    margin-left: 0px;
+  }
+  label {
+    font-size: 20px;
+  }
+}

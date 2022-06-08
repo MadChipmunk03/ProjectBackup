@@ -1,0 +1,20 @@
+<section class="deamonAssignment">
+  <h1>Deamon Assignment</h1>
+  <section class="table">
+    <table>
+      <app-loading-page
+        *ngIf="!(connectionsLoaded && deamonsLoaded)"
+      ></app-loading-page>
+      <tbody *ngIf="connectionsLoaded && deamonsLoaded">
+        <tr>
+          <th>Alias</th>
+          <th>Sel.</th>
+        </tr>
+        <tr *ngFor="let connection of connections">
+          <td>{{ findAlias(connection.deamonId) }}</td>
+          <td><input type="checkbox" [checked]="connection.connected" (click)="flipConnection(connection.id)"/></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</section>

@@ -1,0 +1,83 @@
+<section class="deamonPanel sideBySide" *ngIf="deamonLoaded">
+  <div class="half">
+    <div class="content">
+      <h1>Edit deamon</h1>
+      <form [formGroup]="form">
+        <label for="deamonAlias">Alias:</label>
+        <input type="text" formControlName="alias" name="deamonAlias" /><br />
+        <label
+          >Updated:
+          <button
+            class="status btn btn-light"
+          >
+            {{ statStr(selected?.status || 0).toUpperCase() }}
+          </button></label
+        >
+        <label
+          >Active:
+          <button
+            type="button"
+            class="status btn btn-light"
+            (click)="changeStatus()"
+          >
+            {{ disabeledStr(selected?.status || 0).toUpperCase() }}
+          </button></label
+        >
+        <label
+          >IP: <span class="ip">{{ selected?.iP_Address }}</span></label
+        >
+        <button class="btn btn-success" (click)="saveChanges()">
+          Save changes
+        </button>
+        <!-- <button class="btn btn-danger" (click)="deleteDeam()">Delete</button> -->
+      </form>
+    </div>
+
+    <section class="errorTable">
+      <header>Events</header>
+      <table>
+        <app-loading-page
+          *ngIf="!(eventsLoaded && configsLoaded)"
+        ></app-loading-page>
+        <tbody *ngIf="eventsLoaded && configsLoaded">
+          <tr>
+            <th>Config</th>
+            <th>Message</th>
+          </tr>
+          <tr *ngFor="let event of events">
+            <td>{{ findAliasForConnection(event.connectionId) }}</td>
+            <td>{{ event.message }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <div class="half">
+    <section class="configsTable">
+      <header>Configs</header>
+      <table>
+        <app-loading-page
+          *ngIf="!(connectionsLoaded && configsLoaded)"
+        ></app-loading-page>
+        <tbody *ngIf="connectionsLoaded && configsLoaded">
+          <tr>
+            <th>Alias</th>
+            <th>Sel.</th>
+            <th>Edit</th>
+          </tr>
+          <tr *ngFor="let connection of connections">
+            <td>{{ findAlias(connection.configId) }}</td>
+            <td>
+              <input
+                type="checkbox"
+                [checked]="connection.connected"
+                (click)="flipConnection(connection.id)"
+              />
+            </td>
+            <td><a routerLink="/config/{{ connection.configId }}">✏️</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</section>

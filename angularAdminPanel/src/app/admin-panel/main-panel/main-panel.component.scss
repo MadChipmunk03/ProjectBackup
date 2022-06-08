@@ -1,0 +1,7 @@
+.mainPanel{
+  width: calc(100vw - 250px);
+  height: calc(100vh - 70px);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 10px 20px rgb(66, 66, 66) inset;
+  overflow-y: auto;
+}

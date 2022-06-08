@@ -1,0 +1,28 @@
+<section class="deamonList" *ngIf="loaded">
+  <header>
+    List of deamons<!--<button type="button" class="btn btn-primary" (click)="changeDialogue('filterDeamons')">Filter</button> -->
+  </header>
+  <table>
+    <tbody>
+      <tr>
+        <th>ID</th>
+        <th>Alias</th>
+        <th>Status</th>
+        <th>Edit</th>
+      </tr>
+      <tr *ngFor="let deamon of deamons">
+        <td>{{ deamon.id }}</td>
+        <td>{{ deamon.alias }}</td>
+        <td>{{ statStr(deamon.status).toUpperCase() }}</td>
+        <td><a routerLink="/deamon/{{ deamon.id }}">✏️</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<app-loading-page *ngIf="!loaded"></app-loading-page>
+
+<app-dia-deamons-filter
+  *ngIf="activeDialogue === 'filterDeamons'"
+></app-dia-deamons-filter>
+<app-overlay *ngIf="activeDialogue" (click)="changeDialogue('')"></app-overlay>

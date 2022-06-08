@@ -1,0 +1,27 @@
+<section class="loginDialogue">
+  <h1>Login</h1>
+  <div class="DialogueContent">
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <mat-form-field>
+        <input
+          matInput
+          type="password"
+          formControlName="password"
+          placeholder="Enter password"
+        />
+        <mat-hint *ngIf="WrongPassword" style="color: red">
+          Wrong password!
+        </mat-hint>
+      </mat-form-field>
+      <br />
+      <input
+        [disabled]="form.invalid"
+        type="submit"
+        value="Login"
+        class="btn btn-primary"
+      />
+    </form>
+  </div>
+</section>
+
+<app-overlay></app-overlay>

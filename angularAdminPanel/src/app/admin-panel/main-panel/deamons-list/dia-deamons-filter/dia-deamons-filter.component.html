@@ -1,0 +1,54 @@
+<section class="deamonsFilterDialogue">
+  <h1>Filter deamons<span class="exit">✖</span></h1>
+  <div class="DialogueContent">
+    <form>
+      <h2>Deamon alias:</h2>
+        <input
+        type="text"
+        id="aliasIncludes"
+        name="aliasIncludes"
+      />
+      <br>
+      <h2>Status:</h2>
+      <label class="mainlabel" for="connected">Connected:</label>
+      <section class="sideBySide">
+        <input type="radio" id="Online" name="connected" value="Online" />
+        <label for="Online">Online</label>
+        <input
+          type="radio"
+          id="Offline"
+          name="connected"
+          value="Offline"
+        />
+        <label for="Offline">Offline</label>
+        <input
+          type="radio"
+          id="All"
+          name="connected"
+          value="All"
+        />
+        <label for="All">All</label>
+      </section>
+      <label class="mainlabel" for="connected">Active:</label>
+      <section class="sideBySide">
+        <input type="radio" id="Enabled" name="active" value="Enabled" />
+        <label for="Enabled">Enabled</label>
+        <input
+          type="radio"
+          id="Disabled"
+          name="active"
+          value="Disabled"
+        />
+        <label for="Disabled">Disabled</label>
+        <input
+          type="radio"
+          id="All"
+          name="active"
+          value="All"
+        />
+        <label for="All">All</label>
+      </section>
+    </form>
+    <button type="button" class="btn btn-primary">Apply</button>
+  </div>
+</section>

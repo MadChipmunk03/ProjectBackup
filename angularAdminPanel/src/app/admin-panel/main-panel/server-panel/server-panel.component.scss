@@ -1,0 +1,48 @@
+$darkBlue:  #1c2830;
+$commonBlue: rgb(0, 86, 143);
+$btnShadowGray: rgb(85, 85, 85);
+
+.mainPage {
+  height: calc(100% - 120px);
+  width: calc(100% - 120px);
+  margin: 60px auto;
+
+  h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 7%;
+  }
+
+  .components {
+    display: flex;
+    div {
+      border: 4px solid $darkBlue;
+      overflow: auto;
+      width: 25%;
+      margin: auto;
+      margin-top: 10%;
+      height: 350px;
+      box-shadow: 10px 10px #646464;
+
+      header {
+        background-color: $commonBlue;
+        padding: 10px 0px;
+        font-size: 30px;
+        text-align: center;
+        color: white;
+      }
+
+      p {
+        padding: 20px;
+        text-align: center;
+        font-size: 25px;
+        min-height: calc(100% - 200px);
+      }
+      button {
+        font-size: 25px;
+        float: right;
+        margin-right: 20px;
+      }
+    }
+  }
+}

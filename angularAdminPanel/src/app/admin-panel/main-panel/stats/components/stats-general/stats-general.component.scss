@@ -1,0 +1,70 @@
+$darkBlue: #1c2830;
+$commonBlue: rgb(0, 86, 143);
+$btnShadowGray: rgb(85, 85, 85);
+
+@mixin table() {
+  button {
+    font-size: 25px;
+    float: right;
+    margin: auto 15px auto 0px;
+  }
+  table {
+    background-color: rgb(221, 221, 221);
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+  }
+
+  th {
+    background-color: $commonBlue;
+    height: 40px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+
+  thead tr {
+    background-color: gray;
+    color: #ffffff;
+    text-align: center;
+  }
+  th,
+  td {
+    padding: 12px 15px;
+    overflow-wrap: break-word;
+  }
+  tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  a {
+    all: unset;
+    cursor: pointer;
+  }
+}
+
+.general {
+  border: 4px solid $darkBlue;
+  box-shadow: 10px 10px #646464;
+  margin-bottom: 50px;
+
+  header {
+    background-color: $commonBlue;
+    padding: 10px 0px;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+  }
+
+  @include table();
+  table {
+    width: 100%;
+  }
+  th{
+    width: 30%;
+  }
+  td {
+    font-size: 40px;
+    text-align: center;
+  }
+}

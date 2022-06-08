@@ -1,0 +1,20 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+</head>
+
+<section class="configPanel sideBySide">
+  <div class="half">
+    <app-edit-conf (activeDia)="addItem($event)" [Destinations]="Destinations"></app-edit-conf>
+  </div>
+  <div class="half">
+    <app-list-conf-connections></app-list-conf-connections>
+  </div>
+</section>
+
+<app-dia-destination (activeDia)="addItem($event)" (addDest)="addDest($event)" [selectedDia]="activeDia" *ngIf="activeDia.slice(0, 7) === 'addDest'"></app-dia-destination>
+<app-overlay *ngIf="activeDia"></app-overlay>

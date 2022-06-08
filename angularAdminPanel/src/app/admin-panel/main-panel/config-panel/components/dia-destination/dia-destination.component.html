@@ -1,0 +1,75 @@
+<section class="addDestination" *ngIf="this.formReady">
+  <h1>Add Destination<span class="exit" (click)="escape()">✖</span></h1>
+  <div class="DialogueContent">
+    <form [formGroup]="form">
+      <h2>Save Type</h2>
+      <!-- {{pathValidator}} -->
+      <section class="sideBySide">
+        <input type="radio" formControlName="saveType" value="0" />
+        <label for="LOC">LOC</label>
+        <input type="radio" formControlName="saveType" value="1" />
+        <label for="NET">NET</label>
+        <input type="radio" formControlName="saveType" value="2" />
+        <label for="FTP">FTP</label>
+      </section>
+      <br />
+      <mat-form-field>
+        <input matInput type="text" formControlName="path" placeholder="Path" />
+        <mat-error *ngIf="path?.touched && path?.invalid">
+          Path is Invalid!
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <section
+        class="ipAddress"
+        *ngIf="form.value.saveType === '1' || form.value.saveType === '2'"
+      >
+        <h2>Credentials:</h2>
+        <section class="credentials">
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              formControlName="IP"
+              placeholder="IP address"
+            />
+            <!-- <mat-hint>formát: xxx.xxx.xxx.xxx (192.168.0.1)</mat-hint> -->
+            <mat-error *ngIf="IP?.invalid && IP?.touched">
+              formát: xxx.xxx.xxx.xxx (192.168.0.1)
+            </mat-error>
+          </mat-form-field>
+        </section>
+      </section>
+      <section class="ftp_credentials" *ngIf="form.value.saveType === '2'">
+        <section class="credentials">
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              formControlName="username"
+              placeholder="Username"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              type="password"
+              formControlName="password"
+              placeholder="Password"
+            />
+          </mat-form-field>
+        </section>
+      </section>
+      <button
+        class="btn btn-primary"
+        [disabled]="form.invalid"
+        (click)="addDestination()"
+      >
+        Add
+      </button>
+      <button class="btn btn-primary" (click)="escape()">Cancel</button>
+    </form>
+  </div>
+</section>
+
+<app-overlay></app-overlay>

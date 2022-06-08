@@ -1,0 +1,107 @@
+$darkBlue: #1c2830;
+$commonBlue: rgb(0, 86, 143);
+$btnShadowGray: rgb(85, 85, 85);
+
+@mixin Dialogue {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  h1 {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 5px;
+    background-color: $commonBlue;
+    color: white;
+    margin-bottom: 30px;
+    box-shadow: 0px 10px 10px rgb(66, 66, 66);
+  }
+  span.exit {
+    float: right;
+    margin-right: 30px;
+  }
+
+  .DialogueContent {
+    padding: 00px 30px 0px 30px;
+    overflow: auto;
+    height: calc(100% - 140px);
+
+    h2 {
+      font-size: 30px;
+      padding: 10px 0px 20px 0px;
+      text-decoration: underline;
+      text-decoration-thickness: 4px;
+      text-decoration-color: $commonBlue;
+    }
+
+    form {
+      label {
+        font-size: 25px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid $commonBlue;
+      }
+      input[type="submit"] {
+        float: right;
+        border: none;
+        padding: 8px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 0px 4px 8px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+
+        background-color: white;
+        color: black;
+        border: 2px solid $commonBlue;
+      }
+      input[type="submit"]:hover {
+        background-color: $commonBlue;
+        color: white;
+      }
+    }
+  }
+}
+
+.eventsFilterDialogue {
+  @include Dialogue();
+  width: 600px;
+  padding-bottom: 30px;
+  height: 50%;
+
+  .DialogueContent {
+    max-height: 100%;
+  }
+
+  form {
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin: 18px 2px 0px auto;
+    }
+    input[type="checkbox"]:first-child,
+    input[type="radio"]:first-child {
+      margin-left: 0px;
+    }
+    input[type="date"] {
+      border-color: $commonBlue;
+      font-size: 20px;
+      padding: 0px 10px;
+    }
+  }
+}

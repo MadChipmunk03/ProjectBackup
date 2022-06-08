@@ -1,0 +1,34 @@
+$darkBlue:  #1c2830;
+$commonBlue: rgb(0, 86, 143);
+$btnShadowGray: rgb(85, 85, 85);
+
+.sidePanel {
+  height: calc(100vh - 70px);
+
+  width: 250px;
+  color: white;
+  background-color: #1c2830;
+
+  .links{
+    width: 85%;
+    height: calc(100vh - 280px);
+    margin: 0px auto 30px auto;
+    padding-top: 20px;
+    overflow: auto;
+
+    ul {
+      margin: 0px 30px;
+      list-style-type: none;
+    }
+
+    li {
+      font-size: 25px;
+      margin: 15px 0px;
+
+      a{
+        all: unset;
+        cursor: pointer;
+      }
+    }
+  }
+}

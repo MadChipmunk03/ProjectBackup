@@ -1,0 +1,39 @@
+<section class="configsFilterDialogue">
+  <h1>Filter configs<span class="exit">✖</span></h1>
+  <div class="DialogueContent">
+    <form>
+      <h2>Config alias:</h2>
+      <input type="text" id="aliasIncludes" name="aliasIncludes" />
+      <h2>Active:</h2>
+      <section class="sideBySide">
+        <input type="radio" id="Enabled" name="active" value="Enabled" />
+        <label for="Enabled">Enabled</label>
+        <input type="radio" id="Disabled" name="active" value="Disabled" />
+        <label for="Disabled">Disabled</label>
+        <input type="radio" id="All" name="active" value="All" />
+        <label for="All">All</label>
+      </section>
+      <br />
+
+      <h2>Type:</h2>
+      <section class="sideBySide">
+        <input type="checkbox" id="Full" name="configType" value="Full" />
+        <label for="Full">Full</label>
+        <input
+          type="checkbox"
+          id="Differential"
+          name="configType"
+          value="Differential"
+        />
+        <label for="Differential">Differential</label>
+        <input
+          type="checkbox"
+          id="Incremental"
+          name="configType"
+          value="Incremental"
+        />
+        <label for="Incremental">Incremental</label>
+      </section>
+    </form>
+  </div>
+</section>

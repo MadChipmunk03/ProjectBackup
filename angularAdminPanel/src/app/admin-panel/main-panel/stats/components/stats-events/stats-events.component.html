@@ -1,0 +1,22 @@
+<div class="events">
+  <header>
+    All events<!-- <button type="button" class="btn btn-primary">Filter</button> -->
+  </header>
+  <table>
+    <app-loading-page *ngIf="allLoaded < 4"></app-loading-page>
+    <tbody *ngIf="allLoaded >= 4">
+      <tr>
+        <th>Config</th>
+        <th>Deamon</th>
+        <th>Time</th>
+        <th>Message</th>
+      </tr>
+      <tr *ngFor="let event of events">
+        <td>{{ getConfigAlias(event.connectionId) }}</td>
+        <td>{{ getDeamonAlias(event.connectionId) }}</td>
+        <td>{{ event.time }}</td>
+        <td>{{ typeStr(event.type) }} {{ event.message }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

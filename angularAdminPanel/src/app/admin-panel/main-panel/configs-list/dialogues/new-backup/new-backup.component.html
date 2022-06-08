@@ -1,0 +1,135 @@
+<section class="newBUDialogue">
+  <h1>New Config<span class="exit" (click)="escape()">✖</span></h1>
+  <div class="DialogueContent">
+    <form [formGroup]="form">
+      <h2>Save type:</h2>
+      <section class="sideBySide">
+        <input type="radio" formControlName="SaveType" value="1" />
+        <label for="Full">Full</label>
+        <input type="radio" formControlName="SaveType" value="2" />
+        <label for="differential">Differential</label>
+        <input type="radio" formControlName="SaveType" value="3" />
+        <label for="incremental">Incremental</label>
+      </section>
+      <section class="saveTypeOptions">
+        <mat-form-field>
+          <input
+            matInput
+            type="number"
+            formControlName="size"
+            placeholder="Enter max package size"
+          />
+          <mat-error *ngIf="size?.invalid"> minimum of 1! </mat-error>
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <input
+            matInput
+            type="number"
+            formControlName="count"
+            placeholder="Enter max package count"
+          />
+          <mat-error *ngIf="count?.invalid"> minimum of 1! </mat-error>
+        </mat-form-field>
+      </section>
+      <h2>Backup Time:</h2>
+      <section class="sideBySide">
+        <input
+          formControlName="buDaysMo"
+          type="checkbox"
+          id="Mon"
+          name="Monday"
+          value="Mon"
+        />
+        <label for="Monday"> Mon</label>
+        <input
+          formControlName="buDaysTu"
+          type="checkbox"
+          id="Tue"
+          name="Tuesday"
+          value="Tue"
+        />
+        <label for="Tuesday"> Tue</label>
+        <input
+          formControlName="buDaysWe"
+          type="checkbox"
+          id="Wed"
+          name="Wednesday"
+          value="Wed"
+        />
+        <label for="Wednesday"> Wed</label>
+        <input
+          formControlName="buDaysTh"
+          type="checkbox"
+          id="Thu"
+          name="Thursday"
+          value="Thu"
+        />
+        <label for="Thursday"> Thu</label>
+        <input
+          formControlName="buDaysFr"
+          type="checkbox"
+          id="Fri"
+          name="Friday"
+          value="Fri"
+        />
+        <label for="Friday"> Fri</label>
+        <input
+          formControlName="buDaysSa"
+          type="checkbox"
+          id="Sat"
+          name="Saturday"
+          value="Sat"
+        />
+        <label for="Saturday"> Sat</label>
+        <input
+          formControlName="buDaysSu"
+          type="checkbox"
+          id="Sun"
+          name="Sunday"
+          value="Sun"
+        />
+        <label for="Sunday"> Sun</label>
+      </section>
+      <br />
+      <label for="BUtime">Choose backup time: </label>
+      <input
+        formControlName="buTime"
+        type="time"
+        id="backupTime"
+        name="BUtime"
+      />
+      <h2>Email notification:</h2>
+      <mat-form-field>
+        <input
+          matInput
+          formControlName="email"
+          placeholder="Enter your email"
+          type="text"
+        />
+        <mat-error *ngIf="email?.invalid && email?.touched">
+          Incorrect email address!
+        </mat-error>
+      </mat-form-field>
+      <section class="sideBySide">
+        <input type="radio" formControlName="mailTimeCron" value="sameAsBU" />
+        <label for="AfterBackup">After backup</label>
+        <input
+          type="radio"
+          formControlName="mailTimeCron"
+          value="59 59 23 31 12 ? 2099"
+        />
+        <label for="WeekSummary">Never</label>
+      </section>
+    </form>
+    <br />
+    <button
+      class="btn btn-primary"
+      [disabled]="form.invalid"
+      (click)="addConfig()"
+    >
+      Add
+    </button>
+    <button class="btn btn-primary" (click)="escape()">Cancel</button>
+  </div>
+</section>
